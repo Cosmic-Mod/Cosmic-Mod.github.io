@@ -8,7 +8,7 @@ description: >
 baseurl: "/"
 url: "https://cosmic-mod.github.io"
 permalink: pretty
-#favicon: /path/to/favicon.png
+favicon: /assets/icon.png
 #hide_share_buttons: true
 #theme_color: '#eeeeee'
 #fixed_navbar: top
