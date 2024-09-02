@@ -36,9 +36,9 @@ exclude:
 
 livereload: true
 
-sass:
-  style: compressed
-  source_dir: _sass
+#sass:
+ # style: compressed
+  #source_dir: _sass
   # load_paths: 
     # - node_modules
 
