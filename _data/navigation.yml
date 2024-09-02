@@ -1,18 +1,18 @@
 - name: Docs
   link: /docs/
 - name: Addon support
-  link: /addons/#
+  link: /#
   dropdown:
     - name: Getting started
-      link: /starting/
+      link: /datapacks/starting/
     - name: Solar systems
-      link: /solar/
+      link: /datapacks/solar/
     - name: Planets
-      link: /planet/
+      link: /datapacks/planet/
     - name: Dimensions
-      link: /dim/
+      link: /datapacks/dim/
     - name: Skyboxes
-      link: /sky/
+      link: /datapacks/sky/
 - name: Example Pages
   link: /#
   dropdown:
