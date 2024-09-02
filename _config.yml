@@ -48,4 +48,17 @@ markdown: kramdown
 highlighter: rouge
 
 
+# Redirect /datapacks/file/ to the datapack directory
+collections:
+  datapacks:
+    output: true
+    permalink: /datapacks/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: datapacks
+    values:
+      layout: default
+      permalink: /datapacks/:path/
   
