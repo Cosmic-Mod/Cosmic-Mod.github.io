@@ -16,12 +16,10 @@ For questions and help, join out [discord](https://discord.gg/cdc6sgEExF)!
 
 This mod uses its very own render system, bringing space to life...
 
-Players can now visit planets in a Spaceship, and feel the incredible
-
-expanse of space even on lower end PC thanks to this mods optimisations!
+Players can now visit planets in a spaceship, and feel the incredible
+expanse of space even on lower end PCs thanks to this mods optimisations!
 
 This mod renders planets even outside of render distance, and can even
-
 be played with other performance enhancing mods like sodium!
 
 *Make sure to take a look at the gallery!*
@@ -29,34 +27,28 @@ be played with other performance enhancing mods like sodium!
 ## Planetary Exploration
 
 The mod also adds its own gravity system, and adds dimensions
-
 for all planets, all very rich with minerals and new blocks.
 
 ## Technological Expansion
 
 The mod provides various new blocks with interactive Guis, 
-
 as well as its own electricity system and metal progressions.
 
 ## Exploration
 
-The mod also adds its own way to travel to space, using a Spaceship
-
+The mod also adds its own way to travel to space, using a spaceship
 which can be upgraded to survive in diffente conditions and go faster.
 
 ## Multiplayer Compatibility
 
 The mod also supports multiplayer gameplay, allowing players to embark
-
 on space adventures together and explore the cosmos as a team.
 
 ## Datapack Support
 
 The mod comes with datapack support, allowing people to make their own 
-
 solar systems, planets, and planet dimensions. This makes it super easy to
-
-make use of the wonderfull rendering system!
+make use of the wonderful rendering system!
 
 ## Special thanks to:
 
@@ -66,7 +58,7 @@ Nerdypuzzle
 
 Pacific Cyan
 
-As well as:
+*As well as:*
 
 Ovonsame
 
