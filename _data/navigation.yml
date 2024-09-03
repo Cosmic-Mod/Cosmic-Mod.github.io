@@ -1,5 +1,5 @@
-- name: Docs
-  link: /docs/
+- name: Gallery 
+  link: /gallery/
 - name: Addon support
   link: /#
   dropdown:
