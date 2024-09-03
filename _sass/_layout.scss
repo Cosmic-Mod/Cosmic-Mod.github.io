@@ -12,20 +12,6 @@ div.highlight {
     }
 }
 
-@include mobile {
-    .navbar-item {
-        &.has-dropdown {
-            .navbar-dropdown {
-                display: none;
-            }
-            &.is-active {
-                .navbar-dropdown {
-                display: block;
-            }
-        }
-     }
-  }
-}
 
 .contents {
     box-shadow: $box-shadow;
