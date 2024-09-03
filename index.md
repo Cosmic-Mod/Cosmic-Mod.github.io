@@ -2,6 +2,10 @@
 title: Cosmic Horizons Wiki
 subtitle: The wiki for the Cosmic Horizons mod
 layout: page
+hero_tag: true
+hero_tag_class: is-large is-danger 
+hero_tag_text: "Warning: This mod is in a very alpha state!"
+gallery: main_gallery
 ---
 
 # A brand new Minecraft space mod!

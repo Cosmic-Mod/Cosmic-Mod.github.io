@@ -8,7 +8,7 @@ description: >
 baseurl: "/"
 url: "https://cosmic-mod.github.io"
 permalink: pretty
-favicon: /assets/icon.png
+favicon: /assets/icon.jpg
 #hide_share_buttons: true
 #theme_color: '#eeeeee'
 #fixed_navbar: top
@@ -47,18 +47,11 @@ livereload: true
 markdown: kramdown
 highlighter: rouge
 
-
-# Redirect /datapacks/file/ to the datapack directory
+collections_dir:
 collections:
-  datapacks:
+  addonsupport:
     output: true
-    permalink: /datapacks/:path/
+    folder: _addonsupport
 
-defaults:
-  - scope:
-      path: ""
-      type: datapacks
-    values:
-      layout: default
-      permalink: /datapacks/:path/
+
   

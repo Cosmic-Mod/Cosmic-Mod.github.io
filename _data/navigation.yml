@@ -1,34 +1,5 @@
 - name: Gallery 
   link: /gallery/
 - name: Addon support
-  link: /#
-  dropdown:
-    - name: Getting started
-      link: /datapacks/starting/
-    - name: Solar systems
-      link: /datapacks/solar/
-    - name: Planets
-      link: /datapacks/planet/
-    - name: Dimensions
-      link: /datapacks/dim/
-    - name: Skyboxes
-      link: /datapacks/sky/
-- name: Example Pages
-  link: /#
-  dropdown:
-    - name: Landing Page With Callouts
-      link: /landing/
-    - name: Promo Page
-      link: /promo-page/
-    - name: Sponsors Page
-      link: /sponsors/
-    - name: Image Gallery
-      link: /gallery/
-    - name: Products
-      link: /products/
-    - name: Recipe Page
-      link: /example-recipe/
-    - name: Showcase
-      link: /showcase/
-- name: Blog
-  link: /blog/
+  link: /addonsupport/
+

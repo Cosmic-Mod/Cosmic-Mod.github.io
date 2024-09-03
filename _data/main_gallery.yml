@@ -1,0 +1,20 @@
+- title: Gallery
+  images:
+    - link: assets/gallery/1.png
+      large_link: assets/gallery/1.png
+      ratio: is-16by9
+    - link: assets/gallery/2.png
+      large_link: assets/gallery/2.png
+      ratio: is-16by9
+    - link: assets/gallery/3.png
+      large_link: assets/gallery/3.png
+      ratio: is-16by9      
+    - link: assets/gallery/4.png
+      large_link: assets/gallery/4.png
+      ratio: is-16by9
+    - link: assets/gallery/5.png
+      large_link: assets/gallery/5.png
+      ratio: is-16by9            
+    - link: assets/gallery/6.png
+      large_link: assets/gallery/6.png
+      ratio: is-16by9

@@ -1,4 +1,4 @@
 ---
-title: Gallery
 layout: page
+gallery: main_gallery
 ---
