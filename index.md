@@ -1,45 +1,73 @@
 ---
-title: Bulma Clean Theme
-subtitle: This is the demo site for Bulma Clean Theme
+title: Cosmic Horizons Wiki
+subtitle: The wiki for the Cosmic Horizons mod
 layout: page
 ---
 
-# Bulma Clean Theme demo website
+# A brand new Minecraft space mod!
 
-This website showcases the options for the Bulma Clean theme. The theme is available as a ruby gem or can be used with GitHub pages. 
+This mod adds many new planets, moons and even solar systems!
 
-[![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
-![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
-![GitHub Repo stars](https://img.shields.io/github/stars/chrisrhymes/bulma-clean-theme?style=social)
+MOD STAGE : Very Alpha (can be only played in creative mode)
 
-## Ruby Gem
+For questions and help, join out [discord](https://discord.gg/cdc6sgEExF)!
 
-The ruby gem is available on the Ruby Gems website at the following location. [https://rubygems.org/gems/bulma-clean-theme](https://rubygems.org/gems/bulma-clean-theme).
+## Galactic Expansion
 
-## Documentation
+This mod uses its very own render system, bringing space to life...
 
-For full instructions, please see the [Documentation](/bulma-clean-theme/docs/)
+Players can now visit planets in a Spaceship, and feel the incredible
 
-## Page Layouts
+expanse of space even on lower end PC thanks to this mods optimisations!
 
-This demo site showcases the available page layout options. 
+This mod renders planets even outside of render distance, and can even
 
-* Sidebar
-* Menubar
-* Tabs
-* Footer
-* Hero
-* Contents
-* Landing Page With Callouts
-* Promo Page
-* Sponsors Page
-* Image Gallery
-* Recipe Page
-* Blog
-* Post
+be played with other performance enhancing mods like sodium!
 
-## Supported By JetBrains
+*Make sure to take a look at the gallery!*
 
-JetBrains have kindly provided an Open Source licence to aid in the future development of Bulma Clean Theme.
+## Planetary Exploration
 
-[![JetBrains](img/jetbrains-variant-4.svg)](https://www.jetbrains.com/?from=bulma-clean-theme)
+The mod also adds its own gravity system, and adds dimensions
+
+for all planets, all very rich with minerals and new blocks.
+
+## Technological Expansion
+
+The mod provides various new blocks with interactive Guis, 
+
+as well as its own electricity system and metal progressions.
+
+## Exploration
+
+The mod also adds its own way to travel to space, using a Spaceship
+
+which can be upgraded to survive in diffente conditions and go faster.
+
+## Multiplayer Compatibility
+
+The mod also supports multiplayer gameplay, allowing players to embark
+
+on space adventures together and explore the cosmos as a team.
+
+## Datapack Support
+
+The mod comes with datapack support, allowing people to make their own 
+
+solar systems, planets, and planet dimensions. This makes it super easy to
+
+make use of the wonderfull rendering system!
+
+## Special thanks to:
+
+Wakaba(Sumeshi)
+
+Nerdypuzzle
+
+Pacific Cyan
+
+As well as:
+
+Ovonsame
+
+NorthWestTrees 
