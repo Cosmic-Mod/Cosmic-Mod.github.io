@@ -5,7 +5,7 @@ show_sidebar: false
 menubar: docs_menu
 ---
 
-Anyone is free to contribute information we may have missed or have gotten wrong. Simply go to the [github repository](https://github.com/Cosmic-Mod/Cosmic-Mod.github.io/tree/main/addonsupport), find the markdown file in `/addonsupport/`, make a pull request and we will approve it if I think it’s a good change. 
+Anyone is free to contribute information we may have missed or have gotten wrong. Simply go to the [github repository](https://github.com/Cosmic-Mod/Cosmic-Mod.github.io/tree/main/addonsupport), find the markdown file you want to change in `/addonsupport/`, make a pull request and we will approve it if it’s a good change. 
 
 Keep a few things in mind though to try and keep the wiki consistent:
 
