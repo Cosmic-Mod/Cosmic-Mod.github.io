@@ -13,7 +13,7 @@ This mod adds many new planets, moons and even solar systems!
 
 <style>
 
-      html,
+      
 
       body {
 
