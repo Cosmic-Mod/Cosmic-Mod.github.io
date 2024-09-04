@@ -18,6 +18,6 @@
     - link: assets/gallery2/6.png
       large_link: assets/gallery2/6.png
       ratio: is-16by9
-      - link: assets/gallery2/7.png
+    - link: assets/gallery2/7.png
       large_link: assets/gallery2/7.png
       ratio: is-16by9
