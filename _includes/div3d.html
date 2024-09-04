@@ -21,16 +21,15 @@
 
 
 <script>
+        const canvas{{ include.id }} = document.getElementById("{{ include.id }}"); // Get the canvas element
 
-      const canvas{{ include.id }} = document.getElementById("{{ include.id }}"); // Get the canvas element
-
-      const engine{{ include.id }} = new BABYLON.Engine(canvas{{ include.id }}, true); // Generate the BABYLON 3D engine
-
+        const engine{{ include.id }} = new BABYLON.Engine(canvas{{ include.id }}, true); // Generate the BABYLON 3D engine
 
 
-      // Add your code here matching the playground format
 
-      const createScene{{ include.id }} = function () {
+        // Add your code here matching the playground format
+
+        const createScene{{ include.id }} = function () {
 
         const scene{{ include.id }} = new BABYLON.Scene(engine{{ include.id }});
 
@@ -56,22 +55,17 @@
 
 
       // Register a render loop to repeatedly render the scene
+        engine{{ include.id }}.runRenderLoop(function () {
+                scene{{ include.id }}.render();
 
-      engine{{ include.id }}.runRenderLoop(function () {
-
-        scene{{ include.id }}.render();
-
-      });
+        });
 
 
 
       // Watch for browser/canvas resize events
-
-      window.addEventListener("resize", function () {
-
-        engine{{ include.id }}.resize();
-
-      });
+        window.addEventListener("resize", function () {
+                engine{{ include.id }}.resize();
+        });
 
 </script>
 
