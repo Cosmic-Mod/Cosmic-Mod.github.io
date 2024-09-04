@@ -30,17 +30,10 @@
 
 
       // Add your code here matching the playground format
-      
 
-      const canvas = document.getElementById("renderCanvas"); // Get the canvas element
+      const createScene{{ include.id }} = function () {
 
-      const engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D e
-
-      // Add your code here matching the playground format
-
-      const createScene = function () {
-
-        const scene = new BABYLON.Scene(engine);
+        const scene{{ include.id }} = new BABYLON.Scene(engine{{ include.id }});
 
 
 
@@ -48,15 +41,15 @@
 
 
 
-        const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 15, new BABYLON.Vector3(0, 0, 0));
+        const camera{{ include.id }} = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 15, new BABYLON.Vector3(0, 0, 0));
 
-        camera.attachControl(canvas, true);
+        camera{{ include.id }}.attachControl(canvas, true);
 
-        const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
+        const light{{ include.id }} = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
 
 
 
-        return scene;
+        return scene{{ include.id }};
 
       };
 
