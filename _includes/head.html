@@ -15,14 +15,45 @@
             href="{{ site.baseurl }}/favicon.png"
         {% endif %}
     >
-    <script type="importmap">
-    {
-      "imports": {
-        "three": "https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.js",
-        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.168.0/examples/jsm/"
+    <style>
+
+      html,
+
+      body {
+
+        overflow: hidden;
+
+        width: 100%;
+
+        height: 100%;
+
+        margin: 0;
+
+        padding: 0;
+
       }
-    }
-    </script>
+
+
+
+      #renderCanvas {
+
+        width: 10%;
+
+        height: 10%;
+
+        touch-action: none;
+
+      }
+
+    </style>
+
+
+
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+
+    <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
     <script
         src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"
     ></script>
