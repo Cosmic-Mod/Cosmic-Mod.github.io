@@ -4,12 +4,13 @@ subtitle: The wiki for the Cosmic Horizons mod
 layout: page
 hero_tag: true
 hero_tag_class: is-large is-danger 
-hero_tag_text: "Warning: This mod is in a very alpha state!"
+hero_tag_text: "Warning: This mod is in alpha"
 ---
 
 # A brand new Minecraft space mod!
 
 This mod adds many new planets, moons and even solar systems!
+{% include div3d.html id="testrender" content="blah" %}
 
 MOD STAGE : Very Alpha (can be only played in creative mode)
 
