@@ -35,7 +35,7 @@ This mod adds many new planets, moons and even solar systems!
 
         width: 500px;
 
-        height: 800px;
+        height: 300px;
 
         touch-action: none;
 
