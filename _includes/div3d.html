@@ -1,0 +1,19 @@
+<div class="card">
+        <div class="card-image" id="{{ include.id }}">
+        </div>
+    <div class="card-content">
+        <div class="content">
+          {{ include.content }}
+        </div>
+    </div>
+</div>
+ 
+<script>
+  {{ include.id }}element = document.getElementById("{{ include.id }}")
+  scene{{ include.id }} = new THREE.Scene();
+  scene{{ include.id }}.background = new THREE.Color( 0x555555 );
+  renderer{{ include.id }} = new THREE.WebGLRenderer( { antialias: true } );
+  renderer{{ include.id }}.setSize( {{ include.id }}element.clientWidth, {{ include.id }}element.clientHeight );
+  renderer{{ include.id }}.setPixelRatio( window.devicePixelRatio ) 
+  {{ include.id }}element.appendChild( renderer{{ include.id }}.domElement );
+</script>
