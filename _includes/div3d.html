@@ -1,47 +1,31 @@
-<div class="card">
-        <canvas id="{{ include.id }}" style="height: 200px; width: 500px;">
-        </canvas>
-    <div class="card-content">
-        <div class="content">
-          {{ include.content }}
-        </div>
-    </div>
-</div>
- 
-
-<script src="https://cdn.babylonjs.com/babylon.js"></script>
-
-<script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
-
-<script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+<canvas class="card renderCanvas" id="{{ include.id }}" touch-action="none"></canvas>
 
 
-
-    
 
 
 <script>
-        const canvas{{ include.id }} = document.getElementById("{{ include.id }}"); // Get the canvas element
 
-        const engine{{ include.id }} = new BABYLON.Engine(canvas{{ include.id }}, true); // Generate the BABYLON 3D engine
+      const canvas{{ include.id }} = document.getElementById("{{ include.id }}"); // Get the canvas element
+
+      const engine{{ include.id }} = new BABYLON.Engine(canvas{{ include.id }}, true); // Generate the BABYLON 3D engine
 
 
 
-        // Add your code here matching the playground format
+      // Add your code here matching the playground format
 
-        const createScene{{ include.id }} = function () {
+      const createScene{{ include.id }} = function () {
 
         const scene{{ include.id }} = new BABYLON.Scene(engine{{ include.id }});
 
 
 
-        BABYLON.SceneLoader.ImportMeshAsync("", "https://assets.babylonjs.com/meshes/", "box.babylon");
+        BABYLON.MeshBuilder.CreateBox("box", {});
 
 
 
         const camera{{ include.id }} = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 15, new BABYLON.Vector3(0, 0, 0));
 
-        camera{{ include.id }}.attachControl(canvas, true);
+        camera{{ include.id }}.attachControl(canvas{{ include.id }}, true);
 
         const light{{ include.id }} = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
 
@@ -53,20 +37,26 @@
 
 
 
+      const scene{{ include.id }} = createScene(); //Call the createScene function
+
+
 
       // Register a render loop to repeatedly render the scene
-        engine{{ include.id }}.runRenderLoop(function () {
-                scene{{ include.id }}.render();
 
-        });
+      engine{{ include.id }}.runRenderLoop(function () {
+
+        scene{{ include.id }}.render();
+
+      });
 
 
 
       // Watch for browser/canvas resize events
-        window.addEventListener("resize", function () {
-                engine{{ include.id }}.resize();
-        });
+
+      window.addEventListener("resize", function () {
+
+        engine{{ include.id }}.resize();
+
+      });
 
 </script>
-
-  
