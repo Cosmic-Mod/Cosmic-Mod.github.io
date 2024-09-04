@@ -1,0 +1,23 @@
+- title: Painful images
+  images:
+    - link: assets/gallery2/1.png
+      large_link: assets/gallery2/1.png
+      ratio: is-16by9
+    - link: assets/gallery2/2.png
+      large_link: assets/gallery2/2.png
+      ratio: is-16by9
+    - link: assets/gallery2/3.png
+      large_link: assets/gallery2/3.png
+      ratio: is-16by9      
+    - link: assets/gallery2/4.png
+      large_link: assets/gallery2/4.png
+      ratio: is-16by9
+    - link: assets/gallery2/5.png
+      large_link: assets/gallery2/5.png
+      ratio: is-16by9            
+    - link: assets/gallery2/6.png
+      large_link: assets/gallery2/6.png
+      ratio: is-16by9
+      - link: assets/gallery2/7.png
+      large_link: assets/gallery2/7.png
+      ratio: is-16by9
