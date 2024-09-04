@@ -33,9 +33,9 @@ This mod adds many new planets, moons and even solar systems!
 
       #renderCanvas {
 
-        width: 200px;
+        width: 500px;
 
-        height: 200px;
+        height: 800px;
 
         touch-action: none;
 
