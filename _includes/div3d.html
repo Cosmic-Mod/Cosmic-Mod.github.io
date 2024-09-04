@@ -13,7 +13,7 @@
   scene{{ include.id }} = new THREE.Scene();
   scene{{ include.id }}.background = new THREE.Color( 0x555555 );
   renderer{{ include.id }} = new THREE.WebGLRenderer( { antialias: true } );
-  renderer{{ include.id }}.setSize( {{ include.id }}element.clientWidth, {{ include.id }}element.clientHeight );
+  renderer{{ include.id }}.setSize(200,500);
   renderer{{ include.id }}.setPixelRatio( window.devicePixelRatio ) 
   {{ include.id }}element.appendChild( renderer{{ include.id }}.domElement );
   const camera{{ include.id }} = new THREE.PerspectiveCamera( 60, 500/ 300, 0.01, 1000 );
@@ -29,7 +29,6 @@
 
 	  cube{{ include.id }}.rotation.x += 0.01;
 	  cube{{ include.id }}.rotation.y += 0.01;
-
 	  renderer{{ include.id }}.render( scene{{ include.id }}, camera{{ include.id }} );
 
   }
