@@ -15,7 +15,14 @@
             href="{{ site.baseurl }}/favicon.png"
         {% endif %}
     >
-    
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@v0.168.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.168.0/examples/jsm/"
+      }
+    }
+    </script>
     <script
         src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"
     ></script>
