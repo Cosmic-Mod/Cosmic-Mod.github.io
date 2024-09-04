@@ -30,7 +30,22 @@
 
         const light{{ include.id }} = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
 
-
+	// Skybox
+	var skybox = BABYLON.MeshBuilder.CreateBox("skyBox", {size:1000.0}, scene{{ include.id }});
+	var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene{{ include.id }});
+	skyboxMaterial.backFaceCulling = false;
+	skyboxMaterial.emissiveColor = new BABYLON.Color3(0, 0, 0);
+	skybox.material = skyboxMaterial;			
+	skybox.infiniteDistance = true;
+        skyboxMaterial.disableLighting = true;
+//        window.setTimeout(() => {
+//                var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene{{ include.id }});
+//                        skyboxMaterial.backFaceCulling = false;
+//	                skyboxMaterial.emissiveColor = new BABYLON.Color3(0, 0, 1);
+//                        skyboxMaterial.forceCompilation(skybox, () => {
+//                                skybox.material = skyboxMaterial;
+//                        });
+//        }, 1000);
 
         return scene{{ include.id }};
 
