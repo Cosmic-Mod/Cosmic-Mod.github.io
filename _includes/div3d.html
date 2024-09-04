@@ -16,4 +16,21 @@
   renderer{{ include.id }}.setSize( {{ include.id }}element.clientWidth, {{ include.id }}element.clientHeight );
   renderer{{ include.id }}.setPixelRatio( window.devicePixelRatio ) 
   {{ include.id }}element.appendChild( renderer{{ include.id }}.domElement );
+  const camera{{ include.id }} = new THREE.PerspectiveCamera( 60, 500/ 300, 0.01, 1000 );
+  camera{{ include.id }}.position.set( 0, 1, 5 )
+  const geometry{{ include.id }} = new THREE.BoxGeometry( 1, 1, 1 );
+  const material{{ include.id }} = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+  const cube{{ include.id }} = new THREE.Mesh( geometry{{ include.id }}, material{{ include.id }} );
+  scene{{ include.id }}.add( cube{{ include.id }} );
+
+  camera{{ include.id }}.position.z = 5;
+
+  function animate() {
+
+	  cube{{ include.id }}.rotation.x += 0.01;
+	  cube{{ include.id }}.rotation.y += 0.01;
+
+	  renderer{{ include.id }}.render( scene{{ include.id }}, camera{{ include.id }} );
+
+  }
 </script>
