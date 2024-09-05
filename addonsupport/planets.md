@@ -29,9 +29,7 @@ Planet data is a json object, usually embedded into a solar system file.
 
 `glowing`: boolean, whether the planet is glowing
 
-<details>
-<summary>Glowing data</summary>
-
+{% capture glowing_data %}
 #### If glowing is true the following info is required:
 
 `core_color`: dictionary, needs "r", "g" and "b" keys with integer values from 0 to 255
@@ -45,14 +43,13 @@ The bloom color represents the outer bloom color. A black hole uses 0, 0, 0 for 
 `layer`: integer, controls how detailed the planets glow is. 64 is recommended
 
 ***
-
-</details>
+{% endcapture %}
+{% include spoiler.html name="Glowing data" content=glowing_data %}
 
 `ringed`: boolean, controls whether the planet has rings
 
-<details>
-<summary>Ringed data</summary>
 
+{% capture ringed_data %}
 #### If ringed is true the following info is required:
 
 `"ring_data"`: dictionary, contains unlimited ring objects specified with string names
@@ -81,7 +78,7 @@ A ring must have the following:
 
 `"flip_z"`: boolean, see more info below
 
-//since rings can be tilted. logic for it has been added.
+// since rings can be tilted. logic for it has been added.
 
 use the best suited logic.
 
@@ -96,8 +93,8 @@ flip_z
 // scale radius indicates the size of rings individually not planetR+(scaleradius)
 
 ***
-
-</details>
+{% endcapture %}
+{% include spoiler.html name="Ringed data" content=ringed_data %}
 
 `attached_dimention_id`: string, todo: figure out
 
