@@ -11,48 +11,6 @@ hero_tag_text: "Warning: This mod is in alpha"
 
 This mod adds many new planets, moons and even solar systems!
 
-<style>
-
-      
-
-      body {
-
-        overflow: hidden;
-
-        width: 100%;
-
-        height: 100%;
-
-        margin: 0;
-
-        padding: 0;
-
-      }
-
-
-
-      .renderCanvas {
-
-        width: 500px;
-
-        height: 300px;
-
-        touch-action: none;
-
-      }
-
-    </style>
-
-
-
-<script src="https://cdn.babylonjs.com/babylon.js"></script>
-
-<script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
-
-<script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
-
-
-
 MOD STAGE : Very Alpha (can be only played in creative mode)
 
 For questions and help, join out [discord](https://discord.gg/cdc6sgEExF)!

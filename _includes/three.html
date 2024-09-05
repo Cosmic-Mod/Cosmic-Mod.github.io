@@ -1,9 +1,6 @@
 <canvas class="renderCanvas card" id="renderCanvas{{ include.id }}" touch-action="none" ></canvas>
 
 
-
-
-
 <script>
 
       const canvas{{ include.id }}= document.getElementById("renderCanvas{{ include.id }}"); // Get the canvas element
@@ -21,10 +18,10 @@
 
 
       //  BABYLON.MeshBuilder.CreateBox("box", {});
-        BABYLON.SceneLoader.ImportMesh(
+        var mesh = BABYLON.SceneLoader.ImportMesh(
            undefined, // Name of meshes to load
-           "/assets/models/", // Path on a server for the file
-           "saturn.gltf", // The file name that should be loaded from the above path
+           "{{ include.path }}", // Path on a server for the file
+           "{{ include.model }}", // The file name that should be loaded from the above path
             scene{{ include.id }}, // The scene to load this mesh/model file into
             function (
 		    meshes, 
@@ -39,9 +36,11 @@
 
 
         const camera{{ include.id }} = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 15, new BABYLON.Vector3(0, 0, 0));
-
+        camera{{ include.id }}.lowerRadiusLimit = 15;
+        camera{{ include.id }}.upperRadiusLimit = 15;
+        
         camera{{ include.id }}.attachControl(canvas{{ include.id }}, true);
-
+        
         const light{{ include.id }} = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
 
 	// Skybox
@@ -52,14 +51,7 @@
 	skybox.material = skyboxMaterial;			
 	skybox.infiniteDistance = true;
         skyboxMaterial.disableLighting = true;
-//        window.setTimeout(() => {
-//                var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene{{ include.id }});
-//                        skyboxMaterial.backFaceCulling = false;
-//	                skyboxMaterial.emissiveColor = new BABYLON.Color3(0, 0, 1);
-//                        skyboxMaterial.forceCompilation(skybox, () => {
-//                                skybox.material = skyboxMaterial;
-//                        });
-//        }, 1000);
+
 
         return scene{{ include.id }};
 
