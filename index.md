@@ -51,7 +51,7 @@ This mod adds many new planets, moons and even solar systems!
 
 <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
 
-{% include three.html id="test" %}
+
 
 MOD STAGE : Very Alpha (can be only played in creative mode)
 
