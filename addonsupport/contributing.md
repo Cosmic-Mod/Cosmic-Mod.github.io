@@ -38,6 +38,8 @@ If the object has lots of keys, or is used in multiple files (for example dimens
 
 `“key”`: JSON object, see the page on xyz
 
+You can also use markdown to refrence a link to it. Something like [xyz](/addonsupport/xyz/)
+
 OR, if the dictionary is small and not used elsewhere, simply do an embedded block using
 
 < details>
