@@ -5,7 +5,7 @@ show_sidebar: false
 menubar: docs_menu
 ---
 
-Skybox data is a JSON object, commonly used in solar system data or planet data.
+Skybox data is a JSON object, commonly used in [solar system data](/addonsupport/solarsystems) or [planet data](/addonsupport/planets).
 
 ### Attributes:
 
