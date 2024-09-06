@@ -30,8 +30,8 @@ can be written as:
 OR
 
 ```json
-"key": 1,
-"key_data": 2,
+"key": 1
+"key_data": 2
 "the_fancy_key": 3
 ```
 etc.
