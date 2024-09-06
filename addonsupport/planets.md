@@ -58,13 +58,13 @@ e.g.
 
 `"ring_data": {`
 
-  `"ring1": {ringdata},`
+  `"ring1_": {ringdata},`
 
-  `"ringtwo": {ringdata}`
+  `"ring2_": {ringdata}`
 
 `}`
 
-A ring must have the following:
+A ring data dictionary must have the following:
 
 `"texture_id"`: string, the name of a texture file located in `../assets/cosmos/textures/` (file extension is not needed)
 
