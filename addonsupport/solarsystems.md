@@ -118,13 +118,12 @@ If ringed is true, the following is required:
 
 e.g.
 
+```
 "ring_data": {
-
-"ring1_": {guiringdata},
-
-"ring2_": {guiringdata}
-
+  "ring1_": {guiringdata},
+  "ring2_": {guiringdata}
 }
+```
 
 A gui ring data object must have the following:
 
