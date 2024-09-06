@@ -25,9 +25,9 @@ Solar system files are stored under the cosmic namespace, in the cosmic_data fol
 
 `"attached_dimention_id"`: string, must be a namespace:name linking to a valid dimension
 
-`"skybox_data"`: JSON object, see the page on [Skybox data](/addonsupport/skyboxes/)
+`"skybox_data"`: JSON object, see the page on [skybox data](/addonsupport/skyboxes/)
 
-`“dimensional_data"`: JSON object, see the page on dimensional data
+`“dimensional_data"`: JSON object, see the page on [dimensional data](/addonsupport/dimensions)
 
 `"gui_data"`: JSON object, see below
 
@@ -96,17 +96,17 @@ Each guiplanet object must contain the following:
 
 `"unlocking_dimension"`: string, the dimension id at which fast travel to this planet is unlocked. Should usually be the dimension of this planet
 
-`"atmosphere"`: JSON object, see the page on fancy JSON text
+`"atmosphere"`: JSON object, see the page on [fancy JSON text](/addonsupport/fancytext/)
 
-`"name"`: JSON object, see the page on fancy JSON text
+`"name"`: JSON object, see the page on [fancy JSON text](/addonsupport/fancytext/)
 
-`"type"`: JSON object, see the page on fancy JSON text
+`"type"`: JSON object, see the page on [fancy JSON text](/addonsupport/fancytext/)
 
-`"conditions"`: JSON object, see the page on fancy JSON text
+`"conditions"`: JSON object, see the page on [fancy JSON text](/addonsupport/fancytext/)
 
-`"size"`: JSON object, see the page on fancy JSON text
+`"size"`: JSON object, see the page on [fancy JSON text](/addonsupport/fancytext/)
 
-`"category"`: JSON object, see the page on fancy JSON text
+`"category"`: JSON object, see the page on [fancy JSON text](/addonsupport/fancytext/)
 
 "life": float, percent of life being on this planet betweeen 0 and 1 (purely GUI, will not affect spawn rates)
 
