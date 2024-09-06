@@ -22,8 +22,8 @@ So JSON in the docs like:
 can be written as:
 
 ```json
-"key": 1,
-"key_data": 2,
+"key": 1
+"key_data": 2
 "my_key": 3
 ```
 
