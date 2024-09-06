@@ -5,7 +5,7 @@ show_sidebar: false
 menubar: docs_menu
 ---
 
-Planet data is a json object, usually embedded into a solar system file.
+Planet data is a json object, usually embedded into a [solar system file](/addonsupport/solarsystems).
 ## Valid attributes:
 
 ### Basic info, e.g. position:
