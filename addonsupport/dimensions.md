@@ -5,7 +5,7 @@ show_sidebar: false
 menubar: docs_menu
 ---
 
-Dimension data is commonly used in a solar system file to set the dimension settings. It will also be used to set the settings of a planet*
+Dimension data is commonly used in a [solar system file](/addonsupport/solarsystems/) to set the dimension settings. It will also be used to set the settings of a [planet](/addonsupport/planets)*
 
 ## Attributes:
 
