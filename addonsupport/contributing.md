@@ -69,6 +69,8 @@ This would turn into:
 
 {% endcapture %} {% include spoiler.html name="Keeping consistent" content=consistent %}
 
+***
+
 And here's how to make sure you've done everything:
 {% capture gallery %}
 
@@ -89,7 +91,7 @@ menubar: docs_menu
 ---
 ```
 3. Update `/_data/docs_menu.yml` to include your new site under items as such:
-```yml
+```
 - label: Docs
   items:
     ...
