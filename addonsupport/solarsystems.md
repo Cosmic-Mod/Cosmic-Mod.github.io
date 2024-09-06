@@ -21,11 +21,11 @@ Solar system files are stored under the cosmic namespace, in the cosmic_data fol
 
 
 ## Attributes
-`"planet_data"`: JSON object, see the page on planet data
+`"planet_data"`: JSON object, see the page on [planet data](/addonsupport/planets/)
 
 `"attached_dimention_id"`: string, must be a namespace:name linking to a valid dimension
 
-`"skybox_data"`: JSON object, see the page on Skybox data
+`"skybox_data"`: JSON object, see the page on [Skybox data](/addonsupport/skyboxes/)
 
 `“dimensional_data"`: JSON object, see the page on dimensional data
 
