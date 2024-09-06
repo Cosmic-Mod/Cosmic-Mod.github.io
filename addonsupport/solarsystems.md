@@ -14,7 +14,9 @@ Solar system files are stored under the cosmic namespace, in the cosmic_data fol
 > > cosmos
 > > > cosmic_data
 > > > > solar_system_1.json
+> > > > 
 > > > > solar_system_2.json
+> > > > 
 > > > > etc
 
 
