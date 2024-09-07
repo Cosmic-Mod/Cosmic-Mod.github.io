@@ -7,10 +7,24 @@
     }
   }
 </script>
+<style>
+ .threejs {
+   position: relative;
+   width: 100%;
+   padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+ .threejs > * {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+}
+</style>
 
-
-
-<div id="canvas" style="height: 200px; width: 200px;"></div>
+<div class="threejs">
+   <div id="canvas" style="height: 200px; width: 200px;"></div>
+</div>
 <script>
   // https://discourse.threejs.org/t/how-can-i-put-my-scene-inside-a-html-div/49247
 
@@ -45,8 +59,8 @@
 
 
  // various stuff, not interesting
-  var controls = new OrbitControls( camera, renderer.domElement );
-     controls.enableDamping = true;
+ var controls = new OrbitControls( camera, renderer.domElement );
+    controls.enableDamping = true;
 
  var ambientLight = new THREE.AmbientLight( 'white', 0.5 );
     scene.add( ambientLight );
@@ -58,7 +72,7 @@
  const loader = new GLTFLoader();
 
 // Load the glTF file
- cube = loader.loadAsync('https://cosmic-mod.github.io/assets/models/saturn.gltf')
+ cube = loader.load('https://cosmic-mod.github.io/assets/models/saturn.gltf')
     // Add the loaded scene to the Three.js scene
  scene.add(cube.scene);
  //var cube = new THREE.Mesh(
