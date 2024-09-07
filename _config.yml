@@ -19,7 +19,6 @@ force_theme: dark
 
 plugins:
   - jekyll-sitemap
-  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
   - kramdown-parser-gfm

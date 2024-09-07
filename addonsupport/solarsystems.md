@@ -59,7 +59,7 @@ Solar system files are stored under the cosmic namespace, in the cosmic_data fol
 
 e.g.
 
-```
+```javascript
 "object_data": {
   "planet1_": {guiplanet},
   "planet2_": {guiplanet}
@@ -120,7 +120,7 @@ If ringed is true, the following is required:
 
 e.g.
 
-```
+```javascript
 "ring_data": {
   "ring1_": {guiringdata},
   "ring2_": {guiringdata}
@@ -135,7 +135,7 @@ A gui ring data object must have the following:
 
 {% capture example_gui_data %}
 
-```
+```javascript
 "ring_data": {
   "B1400_sys": {
       "object_data": {

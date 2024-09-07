@@ -14,7 +14,7 @@ They are JSON dictionarys/objects with two keys.
 Note that unlike vanilla text objects, these _cannot_ be combined in a list to have multiple colors.
 
 **This is invalid:**
-```
+```javascript
 "name": [
   {
     "text": "red ",
@@ -27,7 +27,7 @@ Note that unlike vanilla text objects, these _cannot_ be combined in a list to h
 ]
 ```
 However this is fine:
-```
+```javascript
 "name": {
   "text": "Only red",
   "color": "red"
