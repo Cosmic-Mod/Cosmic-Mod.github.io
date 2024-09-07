@@ -8,7 +8,7 @@
   }
 </script>
 
-<div id="canvas"></div>
+<div id="canvas" style="height: 200px; width: 200px;"></div>
 <script>
   // https://discourse.threejs.org/t/how-can-i-put-my-scene-inside-a-html-div/49247
 
@@ -53,19 +53,19 @@
      light.position.set( 1, 1, 1 );
      scene.add( light );
  // Instantiate the GLTFLoader
-const loader = new GLTFLoader();
+ const loader = new GLTFLoader();
 
 // Load the glTF file
-cube = loader.loadAsync('/assets/models/saturn.gltf')
+ cube = loader.loadAsync('/assets/models/saturn.gltf')
     // Add the loaded scene to the Three.js scene
-scene.add(cube.scene);
+ scene.add(cube.scene);
  //var cube = new THREE.Mesh(
  		  	//new THREE.BoxGeometry( 1, 1, 1 ),
       //	new THREE.MeshPhongMaterial( {color:'tan', shininess: 10} )
   //   );	
   //scene.add( cube );
 
-  scene.add( new THREE.AxesHelper(2) );
+ scene.add( new THREE.AxesHelper(2) );
 
 
  function animationLoop( t )
