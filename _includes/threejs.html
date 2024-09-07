@@ -52,12 +52,18 @@
  var light = new THREE.DirectionalLight( 'white', 0.5 );
      light.position.set( 1, 1, 1 );
      scene.add( light );
+ // Instantiate the GLTFLoader
+const loader = new GLTFLoader();
 
- var cube = new THREE.Mesh(
- 		  	new THREE.BoxGeometry( 1, 1, 1 ),
-      	new THREE.MeshPhongMaterial( {color:'tan', shininess: 10} )
-     );	
-  scene.add( cube );
+// Load the glTF file
+cube = loader.loadAsync('/assets/models/saturn.gltf')
+    // Add the loaded scene to the Three.js scene
+scene.add(cube.scene);
+ //var cube = new THREE.Mesh(
+ 		  	//new THREE.BoxGeometry( 1, 1, 1 ),
+      //	new THREE.MeshPhongMaterial( {color:'tan', shininess: 10} )
+  //   );	
+  //scene.add( cube );
 
   scene.add( new THREE.AxesHelper(2) );
 
