@@ -8,123 +8,108 @@
 
     <title>Babylon Template</title>
 
-
-
-    <style>
-
-      html,
-
-      body {
-
-        overflow: hidden;
-
-        width: 100%;
-
-        height: 100%;
-
-        margin: 0;
-
-        padding: 0;
-
-      }
-
-
-
-      #renderCanvas {
-
-        width: 10%;
-
-        height: 10%;
-
-        touch-action: none;
-
-      }
-
-    </style>
-
-
-
-    <script src="https://cdn.babylonjs.com/babylon.js"></script>
-
-    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
-
-    <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
-
   </head>
-
-
-
   <body>
 
-    <canvas class="card" id="renderCanvas" touch-action="none"></canvas>
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.5.1/dist/es-module-shims.js" crossorigin="anonymous"></script>
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.150.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.150.0/examples/jsm/"
+    }
+  }
+</script>
+<style>
+ .threejs {
+   position: relative;
+   width: 100%;
+   padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+ .threejs > * {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+}
+</style>
 
-    <!-- touch-action="none" for best results from PEP -->
+<div class="threejs">
+   <div id="canvas" style="height: 200px; width: 200px;"></div>
+</div>
+<script>
+  // https://discourse.threejs.org/t/how-can-i-put-my-scene-inside-a-html-div/49247
 
+ import * as THREE from "three";
+ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
+ // the DIV from the page
 
-    <script>
-
-      const canvas = document.getElementById("renderCanvas"); // Get the canvas element
-
-      const engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
-
-
-
-      // Add your code here matching the playground format
-
-      const createScene = function () {
-
-        const scene = new BABYLON.Scene(engine);
-
-
-
-        BABYLON.MeshBuilder.CreateBox("box", {});
-        const skybox = BABYLON.MeshBuilder.CreateBox("skyBox", { size: 100.0 }, scene);
-        const skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene);
-        skyboxMaterial.backFaceCulling = false;
-        skyboxMaterial.disableLighting = true;
-	skyboxMaterial.emissiveColor = new BABYLON.Color3(0, 0, 0);
-        skybox.material = skyboxMaterial;
-        skybox.infiniteDistance = true;
-        
-
-        const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 15, new BABYLON.Vector3(0, 0, 0));
-
-        //camera.attachControl(canvas, true);
-
-        const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
-
-
-
-        return scene;
-
-      };
+ var container = document.getElementById( 'canvas' );
 
 
+ // a scene
 
-      const scene = createScene(); //Call the createScene function
-
-
-
-      // Register a render loop to repeatedly render the scene
-
-      engine.runRenderLoop(function () {
-
-        scene.render();
-
-      });
+ var scene = new THREE.Scene();
+     scene.background = new THREE.Color( 'gainsboro' );
 
 
+ // camera that uses the container's size
 
-      // Watch for browser/canvas resize events
+ var camera = new THREE.PerspectiveCamera( 30, container.clientWidth/ container.clientHeight );
+     camera.position.set( 2, 5, 10 );
+     camera.lookAt( scene.position );
 
-      window.addEventListener("resize", function () {
 
-        engine.resize();
+// renderer that uses the container's size and is inserted in it
 
-      });
+ var renderer = new THREE.WebGLRenderer( {antialias: true} );
+     renderer.setSize( container.clientWidth-16, container.clientHeight-16 );
+     renderer.setAnimationLoop( animationLoop );
+     container.appendChild( renderer.domElement );
 
-    </script>
+
+ // various stuff, not interesting
+ var controls = new OrbitControls( camera, renderer.domElement );
+    controls.enableDamping = true;
+
+ var ambientLight = new THREE.AmbientLight( 'white', 0.5 );
+    scene.add( ambientLight );
+
+ var light = new THREE.DirectionalLight( 'white', 0.5 );
+     light.position.set( 1, 1, 1 );
+     scene.add( light );
+ // Instantiate the GLTFLoader
+ const loader = new GLTFLoader();
+
+// Load the glTF file
+ cube = loader.load('https://cosmic-mod.github.io/assets/models/saturn.gltf')
+    // Add the loaded scene to the Three.js scene
+ scene.add(cube.scene);
+ //var cube = new THREE.Mesh(
+ 		  	//new THREE.BoxGeometry( 1, 1, 1 ),
+      //	new THREE.MeshPhongMaterial( {color:'tan', shininess: 10} )
+  //   );	
+  //scene.add( cube );
+
+ scene.add( new THREE.AxesHelper(2) );
+
+
+ function animationLoop( t )
+ {
+     cube.rotation.x = Math.sin( t/700 );
+     cube.rotation.y = Math.sin( t/900 );
+
+     controls.update( );
+ 		 light.position.copy( camera.position );
+     renderer.render( scene, camera );
+}
+	    </script>
+
+
+      
 
   </body>
 
