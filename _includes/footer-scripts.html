@@ -1,1 +1,201 @@
 <!-- footer scripts -->
+
+
+// Code for the planet editor page. NEEDS CLEANING UP, SORRY
+if (document.getElementById("planetCanvas")) {
+    // Get elements from the DOM
+    const canvas = document.getElementById('planetCanvas');
+    const ctx = canvas.getContext('2d');
+    const addPlanetBtn = document.getElementById('addPlanetBtn');
+    const sizeSlider = document.getElementById('sizeSlider');
+    const sizeDisplay = document.getElementById('sizeDisplay');
+    const textureSelect = document.getElementById('textureSelect');
+    const deletePlanetBtn = document.getElementById('deletePlanetBtn');
+    const planetProperties = document.querySelector('.planet-properties');
+
+    const xinput = document.getElementById("xinput")
+    const yinput = document.getElementById("yinput")
+    const zinput = document.getElementById("zinput")
+
+    const yawinput = document.getElementById("yawinput")
+    const pitchinput = document.getElementById("pitchinput")
+    const rollinput = document.getElementById("rollinput")
+
+    // Camera system to handle panning
+    let cameraOffsetX = 0;
+    let cameraOffsetY = 0;
+    let isPanning = false;
+    let startPanX, startPanY;
+
+    // Global variables
+    let planets = [];
+    let selectedPlanet = null;
+    let isDraggingPlanet = false;
+
+    // Event listeners
+    canvas.addEventListener('mousedown', onCanvasClick);
+    canvas.addEventListener('mousemove', onCanvasMouseMove);
+    canvas.addEventListener('mouseup', onCanvasMouseUp);
+
+    addPlanetBtn.addEventListener('click', addPlanet);
+    deletePlanetBtn.addEventListener('click', deleteSelectedPlanet);
+
+    planetProperties.addEventListener("input", updatePlanet)
+
+
+    // Add a planet with Minecraft coordinates
+    function addPlanet() {
+        const newPlanet = {
+            x: 0, 
+            y: 0, 
+            z: 0,
+            yaw: 0,
+            pitch: 0,
+            roll: 0,
+            size: 50,  // Default size
+            texture: 'None'
+        };
+        planets.push(newPlanet);
+        drawPlanets();
+    }
+
+    // Draw planets based on camera position
+    function drawPlanets() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Loop through all planets and draw them
+        planets.forEach(planet => {
+            ctx.beginPath();
+
+            // Convert Minecraft coordinates to canvas screen coordinates
+            const screenX = canvas.width / 2 + planet.x - cameraOffsetX;
+            const screenY = canvas.height / 2 + planet.z - cameraOffsetY;
+
+            // Draw square for planet
+            ctx.rect(screenX - planet.size / 2, screenY - planet.size / 2, planet.size, planet.size);
+            ctx.fillStyle = planet.texture === 'None' ? 'gray' : 'blue'; // Placeholder for texture logic
+            ctx.fill();
+            ctx.stroke();
+        });
+    }
+
+    // Handle clicking on the canvas (for selecting planets or starting panning)
+    function onCanvasClick(event) {
+        const mousePos = getMousePos(event);
+        selectedPlanet = planets.find(planet => isInsidePlanet(mousePos, planet));
+
+        console.log(planets, selectedPlanet)
+
+
+        if (selectedPlanet) {
+            openPropertiesMenu(selectedPlanet);
+            updateProperties()
+            isDraggingPlanet = true;
+        } else {
+            planetProperties.style.display = 'none';
+            // Start panning the canvas
+            isPanning = true;
+            startPanX = mousePos.x;
+            startPanY = mousePos.y;
+        }
+    }
+
+    // Handle mouse movement (either dragging a planet or panning the canvas)
+    function onCanvasMouseMove(event) {
+        const mousePos = getMousePos(event);
+
+        if (isDraggingPlanet && selectedPlanet) {
+            // Update planet Minecraft coordinates based on dragging
+            selectedPlanet.x = mousePos.x - canvas.width / 2 + cameraOffsetX;
+            selectedPlanet.z = mousePos.y - canvas.height / 2 + cameraOffsetY;
+            updateProperties()
+            drawPlanets();
+        } else if (isPanning) {
+            // Adjust the camera offset based on mouse movement
+            cameraOffsetX -= (mousePos.x - startPanX);
+            cameraOffsetY -= (mousePos.y - startPanY);
+            startPanX = mousePos.x;
+            startPanY = mousePos.y;
+            drawPlanets();
+        }
+    }
+
+    // Handle releasing the mouse (end dragging or panning)
+    function onCanvasMouseUp() {
+        isDraggingPlanet = false;
+        isPanning = false;
+    }
+
+    // Check if the mouse click is inside the square (planet)
+    function isInsidePlanet(mousePos, planet) {
+        const screenX = canvas.width / 2 + planet.x - cameraOffsetX;
+        const screenY = canvas.height / 2 + planet.z - cameraOffsetY;
+
+        return mousePos.x >= screenX - planet.size / 2 &&
+            mousePos.x <= screenX + planet.size / 2 &&
+            mousePos.y >= screenY - planet.size / 2 &&
+            mousePos.y <= screenY + planet.size / 2;
+    }
+
+    // Get the mouse position relative to the canvas
+    function getMousePos(event) {
+        const rect = canvas.getBoundingClientRect();
+        return {
+            x: event.clientX - rect.left,
+            y: event.clientY - rect.top
+        };
+    }
+
+    // Open the planet properties menu
+    function openPropertiesMenu(planet) {
+        planetProperties.style.display = 'block';
+        sizeSlider.value = planet.size;
+        textureSelect.value = planet.texture;
+    }
+
+    // Update planet properties based on the menu inputs
+    function updatePlanet() {
+        console.log("updating planet")
+        if (selectedPlanet) {
+            selectedPlanet.size = sizeSlider.value;
+            
+            selectedPlanet.x = Number(xinput.value)
+            selectedPlanet.y = Number(yinput.value)
+            selectedPlanet.z = Number(zinput.value)
+
+            selectedPlanet.yaw = Number(yawinput.value)
+            selectedPlanet.pitch = Number(pitchinput.value)
+            selectedPlanet.roll = Number(rollinput.value)
+
+            sizeDisplay.textContent = sizeSlider.value;
+
+            drawPlanets();
+        }
+    }
+
+    function updateProperties() {
+        if (selectedPlanet) {
+            xinput.value = selectedPlanet.x
+            yinput.value = selectedPlanet.y
+            zinput.value = selectedPlanet.z
+
+            sizeDisplay.textContent = sizeSlider.value;
+
+            yawinput.value = selectedPlanet.yaw
+            pitchinput.value = selectedPlanet.pitch
+            rollinput.value = selectedPlanet.roll
+        }
+    }
+
+    // Delete the selected planet
+    function deleteSelectedPlanet() {
+        if (selectedPlanet) {
+            planets = planets.filter(planet => planet !== selectedPlanet);
+            selectedPlanet = null;
+            planetProperties.style.display = 'none';
+            drawPlanets();
+        }
+    }
+
+}
+
