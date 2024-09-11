@@ -9,7 +9,7 @@ Skybox data is a JSON object, commonly used in [solar system data](/addonsupport
 
 ### Attributes:
 
-`"attached_skybox_texture_id"`: string, name of a texture in …/assets/cosmic/textures (file extension not needed)
+`"texture_id"`: string, name of a texture in …/assets/cosmic/textures (file extension not needed)
 
 `"yaw"`: int, yaw of the skybox texture
 
