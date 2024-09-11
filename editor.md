@@ -5,10 +5,6 @@ layout: page
 
 
 <style>
-    body { 
-        display: flex; 
-        font-family: Arial, sans-serif; 
-    }
     canvas { 
         border: 1px solid black; 
         margin-right: 20px; 
