@@ -7,5 +7,5 @@ hero_tag_class: is-large is-danger
 hero_tag_text: "Warning: Do Not Look"
 ---
 
-{% include threejs.html id="test" path="/assets/models/" model="earth.gltf" %}
+{% include three.html id="test" path="/assets/models/" model="earth.gltf" %}
 
