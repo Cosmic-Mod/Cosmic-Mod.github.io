@@ -33,7 +33,7 @@
 			//create a Center of Transformation
 
                         var CoT = new BABYLON.TransformNode("{{ include.id }}");
-			CoT.rotation.z = 0.7;
+			CoT.rotation.z = 0.401426;
        
                         mesh.parent = CoT; //apply to Box
 			const rotation = mesh.rotationQuaternion.toEulerAngles()
@@ -49,7 +49,7 @@
 	      
 
 
-        const camera{{ include.id }} = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 15, new BABYLON.Vector3(0,2, 0));
+        const camera{{ include.id }} = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 15, new BABYLON.Vector3(10,2, 0));
         camera{{ include.id }}.lowerRadiusLimit = 15;
         camera{{ include.id }}.upperRadiusLimit = 15;
         //camera{{ include.id }}.attachControl(canvas{{ include.id }}, true);
