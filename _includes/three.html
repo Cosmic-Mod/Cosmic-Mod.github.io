@@ -24,6 +24,10 @@
            "saturn.gltf", // The file name that should be loaded from the above path
             scene{{ include.id }},function (M) {
 		mesh = M[0];
+		scene{{ include.id }}.beforeRender = () => {
+			mesh.rotation.y = 0;
+
+		};
 	    }
          )
 
