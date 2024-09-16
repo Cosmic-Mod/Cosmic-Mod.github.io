@@ -52,10 +52,10 @@
 	skybox.infiniteDistance = true;
         skyboxMaterial.disableLighting = true;
 
-	allMeshes = scene.meshes
+	allMeshes = scene{{ include.id }}.meshes
                     
                     
-        scene.registerBeforeRender(function(){
+        scene{{ include.id }}.registerBeforeRender(function(){
 
         	allMeshes.forEach(m => {
         	//m.rotate(BABYLON.Axis.Y, 0.01, BABYLON.Space.LOCAL)  
