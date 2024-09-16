@@ -26,6 +26,10 @@
 		mesh = M[0];
 		scene{{ include.id }}.beforeRender = () => {
 			mesh.rotation.y += 20;
+			const rotation = mesh.rotationQuaternion.toEulerAngles()
+		        rotation.y += 0.01;
+		        mesh.rotationQuaternion = BABYLON.Quaternion.FromEulerVector(rotation)
+		
 
 		};
 	    }
