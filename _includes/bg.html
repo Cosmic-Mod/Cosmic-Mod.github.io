@@ -3,7 +3,7 @@
 
 <script>
 
-      const canvasBG= document.createElement('canvas');// Get the canvas element
+      const canvasBG= document.getElementById("renderCanvasBG"); // Get the canvas element
 
       const engineBG = new BABYLON.Engine(canvasBG, true); // Generate the BABYLON 3D engine
 	
@@ -80,7 +80,7 @@
 
 
       const sceneBG = createSceneBG(); //Call the createScene function
-      document.body.style.background = 'url(' + canvasBG.toDataURL() + ')';
+      
 
 
       // Register a render loop to repeatedly render the scene
