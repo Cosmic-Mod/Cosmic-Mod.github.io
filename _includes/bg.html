@@ -3,9 +3,9 @@
 
 <script>
 
-      const canvas{{ include.id }}= document.getElementById("renderCanvas{{ include.id }}"); // Get the canvas element
+      const canvasBG= document.getElementById("renderCanvasBG"); // Get the canvas element
 
-      const engine{{ include.id }} = new BABYLON.Engine(canvas{{ include.id }}, true); // Generate the BABYLON 3D engine
+      const engineBG = new BABYLON.Engine(canvasBG, true); // Generate the BABYLON 3D engine
 	
       
 
@@ -15,24 +15,24 @@
 
       // Add your code here matching the playground format
 
-      const createScene{{ include.id }} = function () {
+      const createSceneBG = function () {
 
-        const scene{{ include.id }} = new BABYLON.Scene(engine{{ include.id }});
+        const sceneBG = new BABYLON.Scene(engineBG);
 
 
 	var mesh;
         //  BABYLON.MeshBuilder.CreateBox("box", {});
         BABYLON.SceneLoader.ImportMesh(
            undefined, // Name of meshes to load
-           "{{ include.path }}", // Path on a server for the file
-           "{{ include.model }}", // The file name that should be loaded from the above path
-            scene{{ include.id }},function (M) {
+           "BG", // Path on a server for the file
+           "BG", // The file name that should be loaded from the above path
+            sceneBG,function (M) {
 		mesh = M[0];
-		scene{{ include.id }}.beforeRender = () => {
+		sceneBG.beforeRender = () => {
 			
 			//create a Center of Transformation
 
-                        var CoT = new BABYLON.TransformNode("{{ include.id }}");
+                        var CoT = new BABYLON.TransformNode("BG");
 			CoT.rotation.z = 0.401426;
        
                         mesh.parent = CoT; //apply to Box
@@ -49,16 +49,16 @@
 	      
 
 
-        const camera{{ include.id }} = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 15, new BABYLON.Vector3(0,2,-10));
-        camera{{ include.id }}.lowerRadiusLimit = 15;
-        camera{{ include.id }}.upperRadiusLimit = 15;
-        //camera{{ include.id }}.attachControl(canvas{{ include.id }}, true);
+        const cameraBG = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 15, new BABYLON.Vector3(0,2,-10));
+        cameraBG.lowerRadiusLimit = 15;
+        cameraBG.upperRadiusLimit = 15;
+        //cameraBG.attachControl(canvasBG, true);
         
-        const light{{ include.id }} = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
+        const lightBG = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
 
 	// Skybox
-	var skybox = BABYLON.MeshBuilder.CreateBox("skyBox", {size:1000.0}, scene{{ include.id }});
-	var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene{{ include.id }});
+	var skybox = BABYLON.MeshBuilder.CreateBox("skyBox", {size:1000.0}, sceneBG);
+	var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", sceneBG);
 	skyboxMaterial.backFaceCulling = false;
 	skyboxMaterial.emissiveColor = new BABYLON.Color3(0, 0, 0);
 	skybox.material = skyboxMaterial;			
@@ -73,21 +73,21 @@
 		//console.log(scene{{ include.id }}.getMeshByName("__root__"));
 	//});
 
-        return scene{{ include.id }};
+        return sceneBG;
 
       };
 
 
 
-      const scene{{ include.id }} = createScene{{ include.id }}(); //Call the createScene function
+      const sceneBG = createSceneBG(); //Call the createScene function
 
 
 
       // Register a render loop to repeatedly render the scene
 
-      engine{{ include.id }}.runRenderLoop(function () {
+      engineBG.runRenderLoop(function () {
 
-        scene{{ include.id }}.render();
+        sceneBG.render();
 
       });
 
@@ -97,7 +97,7 @@
 
       window.addEventListener("resize", function () {
 
-        engine{{ include.id }}.resize();
+        engineBG.resize();
 
       });
 
