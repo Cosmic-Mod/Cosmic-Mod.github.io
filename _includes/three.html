@@ -18,7 +18,7 @@
 
 	var mesh;
         //  BABYLON.MeshBuilder.CreateBox("box", {});
-        return BABYLON.SceneLoader.ImportMesh(
+        BABYLON.SceneLoader.ImportMesh(
            undefined, // Name of meshes to load
            "{{ include.path }}", // Path on a server for the file
            "saturn.gltf", // The file name that should be loaded from the above path
