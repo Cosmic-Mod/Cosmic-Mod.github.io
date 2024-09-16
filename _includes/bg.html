@@ -1,9 +1,9 @@
-<canvas id="renderCanvas{{ include.id }}" touch-action="scroll" style="height: 100%; width: 100%"></canvas>
+<canvas id="renderCanvasBG" touch-action="scroll" style="height: 100%; width: 100%"></canvas>
 
 
 <script>
 
-      const canvasBG= document.getElementById("renderCanvasBG"); // Get the canvas element
+      const canvasBG= document.createElement('canvas');// Get the canvas element
 
       const engineBG = new BABYLON.Engine(canvasBG, true); // Generate the BABYLON 3D engine
 	
@@ -24,8 +24,8 @@
         //  BABYLON.MeshBuilder.CreateBox("box", {});
         BABYLON.SceneLoader.ImportMesh(
            undefined, // Name of meshes to load
-           "BG", // Path on a server for the file
-           "BG", // The file name that should be loaded from the above path
+           "{{ include.path }}", // Path on a server for the file
+           "{{ include.model }}", // The file name that should be loaded from the above path
             sceneBG,function (M) {
 		mesh = M[0];
 		sceneBG.beforeRender = () => {
@@ -80,7 +80,7 @@
 
 
       const sceneBG = createSceneBG(); //Call the createScene function
-
+      document.body.style.background = 'url(' + canvasBG.toDataURL() + ')';
 
 
       // Register a render loop to repeatedly render the scene
