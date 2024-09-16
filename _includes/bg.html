@@ -1,0 +1,104 @@
+<canvas id="renderCanvas{{ include.id }}" touch-action="none" ></canvas>
+
+
+<script>
+
+      const canvas{{ include.id }}= document.getElementById("renderCanvas{{ include.id }}"); // Get the canvas element
+
+      const engine{{ include.id }} = new BABYLON.Engine(canvas{{ include.id }}, true); // Generate the BABYLON 3D engine
+	
+      
+
+
+
+
+
+      // Add your code here matching the playground format
+
+      const createScene{{ include.id }} = function () {
+
+        const scene{{ include.id }} = new BABYLON.Scene(engine{{ include.id }});
+
+
+	var mesh;
+        //  BABYLON.MeshBuilder.CreateBox("box", {});
+        BABYLON.SceneLoader.ImportMesh(
+           undefined, // Name of meshes to load
+           "{{ include.path }}", // Path on a server for the file
+           "{{ include.model }}", // The file name that should be loaded from the above path
+            scene{{ include.id }},function (M) {
+		mesh = M[0];
+		scene{{ include.id }}.beforeRender = () => {
+			
+			//create a Center of Transformation
+
+                        var CoT = new BABYLON.TransformNode("{{ include.id }}");
+			CoT.rotation.z = 0.401426;
+       
+                        mesh.parent = CoT; //apply to Box
+			const rotation = mesh.rotationQuaternion.toEulerAngles()
+		        rotation.y += 0.01;
+			//rotation.x = 1;
+		        mesh.rotationQuaternion = BABYLON.Quaternion.FromEulerVector(rotation)
+
+		};
+	    }
+         )
+
+
+	      
+
+
+        const camera{{ include.id }} = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 15, new BABYLON.Vector3(0,2,-10));
+        camera{{ include.id }}.lowerRadiusLimit = 15;
+        camera{{ include.id }}.upperRadiusLimit = 15;
+        //camera{{ include.id }}.attachControl(canvas{{ include.id }}, true);
+        
+        const light{{ include.id }} = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
+
+	// Skybox
+	var skybox = BABYLON.MeshBuilder.CreateBox("skyBox", {size:1000.0}, scene{{ include.id }});
+	var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene{{ include.id }});
+	skyboxMaterial.backFaceCulling = false;
+	skyboxMaterial.emissiveColor = new BABYLON.Color3(0, 0, 0);
+	skybox.material = skyboxMaterial;			
+	skybox.infiniteDistance = true;
+        skyboxMaterial.disableLighting = true;
+                    
+                    
+        //scene{{ include.id }}.registerBeforeRender(function(){
+		//const rotation = scene{{ include.id }}.getMeshByName("__root__").rotationQuaternion.toEulerAngles()
+		//rotation.y += 0.01;
+		//scene{{ include.id }}.getMeshByName("__root__").rotationQuaternion = BABYLON.Quaternion.FromEulerVector(rotation)
+		//console.log(scene{{ include.id }}.getMeshByName("__root__"));
+	//});
+
+        return scene{{ include.id }};
+
+      };
+
+
+
+      const scene{{ include.id }} = createScene{{ include.id }}(); //Call the createScene function
+
+
+
+      // Register a render loop to repeatedly render the scene
+
+      engine{{ include.id }}.runRenderLoop(function () {
+
+        scene{{ include.id }}.render();
+
+      });
+
+
+
+      // Watch for browser/canvas resize events
+
+      window.addEventListener("resize", function () {
+
+        engine{{ include.id }}.resize();
+
+      });
+
+        </script>
