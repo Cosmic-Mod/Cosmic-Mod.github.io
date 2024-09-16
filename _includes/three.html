@@ -22,13 +22,8 @@
            undefined, // Name of meshes to load
            "{{ include.path }}", // Path on a server for the file
            "saturn.gltf", // The file name that should be loaded from the above path
-            scene{{ include.id }}, // The scene to load this mesh/model file into
-            function (
-		    meshes, 
-		    particleSystems,
-		    skeletons,
-		    animationList
-    ).then((result) =>{
+            scene{{ include.id }}
+         ).then((result) =>{
 	    const root = result.meshes[0];
 	    //body is our actual player mesh
 	    const body = root;
