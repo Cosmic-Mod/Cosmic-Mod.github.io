@@ -17,13 +17,13 @@
 
 
 	var mesh;
-      //  BABYLON.MeshBuilder.CreateBox("box", {});
+        //  BABYLON.MeshBuilder.CreateBox("box", {});
         return BABYLON.SceneLoader.ImportMesh(
            undefined, // Name of meshes to load
            "{{ include.path }}", // Path on a server for the file
            "saturn.gltf", // The file name that should be loaded from the above path
-            scene{{ include.id }},function (Meshes) {
-		mesh = Meshes[0];
+            scene{{ include.id }},function (M) {
+		mesh = M[0];
 	    }
          )
 
