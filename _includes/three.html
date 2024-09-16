@@ -7,19 +7,7 @@
 
       const engine{{ include.id }} = new BABYLON.Engine(canvas{{ include.id }}, true); // Generate the BABYLON 3D engine
 	
-      BABYLON.Mesh.prototype.rotateAroundPivot = function(pivotPoint, axis, angle) {
-	if(!this._rotationQuaternion) {
-		this._rq = BABYLON.Quaternion.RotationYawPitchRoll(this.rotation.y, this.rotation.x, this.rotation.z);
-	}
-	else this._rq = this.rotationQuaternion		
-	var _p = new BABYLON.Quaternion(this.position.x - pivotPoint.x, this.position.y - pivotPoint.y, this.position.z - pivotPoint.z, 0);
-	axis.normalize();
-	var _q = BABYLON.Quaternion.RotationAxis(axis,angle);  //form quaternion rotation		
-	var _qinv = BABYLON.Quaternion.Inverse(_q);	
-	var _pdash = _q.multiply(_p).multiply(_qinv);
-	this.position = new BABYLON.Vector3(pivotPoint.x + _pdash.x, pivotPoint.y + _pdash.y, pivotPoint.z + _pdash.z);
-	this.rotationQuaternion = _q.multiply(this._rq);
-}
+      
 
 
 
@@ -41,13 +29,17 @@
             scene{{ include.id }},function (M) {
 		mesh = M[0];
 		scene{{ include.id }}.beforeRender = () => {
-			//mesh.rotation.y += 20;
-			//const rotation = mesh.rotationQuaternion.toEulerAngles()
-		        //rotation.y += 0.01;
+			
+			//create a Center of Transformation
+
+                        var CoT = new BABYLON.TransformNode("root");
+			CoT.rotation.y = 1
+       
+                        mesh.parent = CoT; //apply to Box
+			const rotation = mesh.rotationQuaternion.toEulerAngles()
+		        rotation.y += 0.01;
 			//rotation.x = 1;
-		        //mesh.rotationQuaternion = BABYLON.Quaternion.FromEulerVector(rotation)
-			mesh.rotateAroundPivot(new BABYLON.Vector3(1, 2, -1), new BABYLON.Axis.Y, Math.PI/4);
-		
+		        mesh.rotationQuaternion = BABYLON.Quaternion.FromEulerVector(rotation)
 
 		};
 	    }
