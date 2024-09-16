@@ -17,4 +17,4 @@ Skybox data is a JSON object, commonly used in [solar system data](/addonsupport
 
 `"roll"`: int, roll of the skybox texture
 
-
+`"alpha"`: int, from 0 to 255. Transparency of the skybox. Behind the skybox is simply sky fog. 0 is no skybox visible, 255 is no fog visible.
