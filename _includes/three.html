@@ -52,6 +52,26 @@
 	skybox.infiniteDistance = true;
         skyboxMaterial.disableLighting = true;
 
+	allMeshes = scene.meshes
+                    
+                    
+        scene.registerBeforeRender(function(){
+
+        	allMeshes.forEach(m => {
+        	//m.rotate(BABYLON.Axis.Y, 0.01, BABYLON.Space.LOCAL)  
+        	//console.log(m.rotationQuaternion)                   
+        		if(m.rotationQuaternion) {
+        			const rotation = m.rotationQuaternion.toEulerAngles()
+                		rotation.y += 0.01;
+                		m.rotationQuaternion = BABYLON.Quaternion.FromEulerVector(rotation)
+        		}
+			else {
+        			m.rotation.y += 0.01;
+        		}
+                            
+        	})
+                        
+	});
 
         return scene{{ include.id }};
 
