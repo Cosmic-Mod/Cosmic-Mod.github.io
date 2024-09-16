@@ -53,12 +53,12 @@
         skyboxMaterial.disableLighting = true;
                     
                     
-        scene{{ include.id }}.registerBeforeRender(function(){
-		const rotation = scene{{ include.id }}.getMeshByName("__root__").rotationQuaternion.toEulerAngles()
-		rotation.y += 0.01;
-		scene{{ include.id }}.getMeshByName("__root__").rotationQuaternion = BABYLON.Quaternion.FromEulerVector(rotation)
-		console.log(scene{{ include.id }}.getMeshByName("__root__"));
-	});
+        //scene{{ include.id }}.registerBeforeRender(function(){
+		//const rotation = scene{{ include.id }}.getMeshByName("__root__").rotationQuaternion.toEulerAngles()
+		//rotation.y += 0.01;
+		//scene{{ include.id }}.getMeshByName("__root__").rotationQuaternion = BABYLON.Quaternion.FromEulerVector(rotation)
+		//console.log(scene{{ include.id }}.getMeshByName("__root__"));
+	//});
 
         return scene{{ include.id }};
 
