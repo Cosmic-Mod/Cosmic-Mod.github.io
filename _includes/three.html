@@ -50,9 +50,10 @@
                     
                     
         scene{{ include.id }}.registerBeforeRender(function(){
-		const rotation = mesh.rotationQuaternion.toEulerAngles()
-		rotation.y += 0.01;
-		mesh.rotationQuaternion = BABYLON.Quaternion.FromEulerVector(rotation)            
+		// const rotation = mesh.rotationQuaternion.toEulerAngles()
+		// rotation.y += 0.01;
+		// mesh.rotationQuaternion = BABYLON.Quaternion.FromEulerVector(rotation)
+		console.log(typeof mesh);
 	});
 
         return scene{{ include.id }};
