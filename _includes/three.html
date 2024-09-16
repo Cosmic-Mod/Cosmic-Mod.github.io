@@ -18,7 +18,7 @@
 
 
       //  BABYLON.MeshBuilder.CreateBox("box", {});
-        var mesh = BABYLON.SceneLoader.ImportMesh(
+        return BABYLON.SceneLoader.ImportMesh(
            undefined, // Name of meshes to load
            "{{ include.path }}", // Path on a server for the file
            "saturn.gltf", // The file name that should be loaded from the above path
@@ -28,9 +28,20 @@
 		    particleSystems,
 		    skeletons,
 		    animationList
-    ) {
-        // Custom Code to run after Loading has finished
-    }
+    ).then((result) =>{
+	    const root = result.meshes[0];
+	    //body is our actual player mesh
+	    const body = root;
+	    body.parent = outer;
+	    body.isPickable = false; //so our raycasts dont hit ourself
+	    body.getChildMeshes().forEach(m => {
+	        m.isPickable = false;
+    	    })
+
+	    return {
+	        mesh: outer as Mesh,
+	    }
+});
 );
 	      
 
@@ -54,9 +65,9 @@
                     
                     
         scene{{ include.id }}.registerBeforeRender(function(){
-		const rotation = meshes[0].rotationQuaternion.toEulerAngles()
+		const rotation = scene{{ include.id }}.getMeshByName("outer").rotationQuaternion.toEulerAngles()
 		rotation.y += 0.01;
-		meshes[0].rotationQuaternion = BABYLON.Quaternion.FromEulerVector(rotation)            
+		scene{{ include.id }}.getMeshByName("outer").rotationQuaternion = BABYLON.Quaternion.FromEulerVector(rotation)            
 	});
 
         return scene{{ include.id }};
