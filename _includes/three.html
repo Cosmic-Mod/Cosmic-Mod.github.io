@@ -52,8 +52,8 @@
         const camera{{ include.id }} = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 15, new BABYLON.Vector3(0, 0, 0));
         camera{{ include.id }}.lowerRadiusLimit = 15;
         camera{{ include.id }}.upperRadiusLimit = 15;
-        
-        camera{{ include.id }}.attachControl(canvas{{ include.id }}, true);
+        camera{{ include.id }}.position.y = 5
+        //camera{{ include.id }}.attachControl(canvas{{ include.id }}, true);
         
         const light{{ include.id }} = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
 
