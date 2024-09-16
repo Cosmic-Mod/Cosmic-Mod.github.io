@@ -33,7 +33,7 @@
 			//create a Center of Transformation
 
                         var CoT = new BABYLON.TransformNode("{{ include.id }}");
-			CoT.rotation.x = 0.7;
+			CoT.rotation.z = 0.7;
        
                         mesh.parent = CoT; //apply to Box
 			const rotation = mesh.rotationQuaternion.toEulerAngles()
