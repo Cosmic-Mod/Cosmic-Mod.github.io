@@ -21,7 +21,7 @@
         var mesh = BABYLON.SceneLoader.ImportMesh(
            undefined, // Name of meshes to load
            "{{ include.path }}", // Path on a server for the file
-           "{{ include.model }}", // The file name that should be loaded from the above path
+           "saturn.gltf", // The file name that should be loaded from the above path
             scene{{ include.id }}, // The scene to load this mesh/model file into
             function (
 		    meshes, 
@@ -56,21 +56,9 @@
                     
                     
         scene{{ include.id }}.registerBeforeRender(function(){
-
-        	allMeshes.forEach(m => {
-        	//m.rotate(BABYLON.Axis.Y, 0.01, BABYLON.Space.LOCAL)  
-        	//console.log(m.rotationQuaternion)                   
-        		if(m.rotationQuaternion) {
-        			const rotation = m.rotationQuaternion.toEulerAngles()
-                		rotation.y += 0.01;
-                		m.rotationQuaternion = BABYLON.Quaternion.FromEulerVector(rotation)
-        		}
-			else {
-        			m.rotation.y += 0.01;
-        		}
-                            
-        	})
-                        
+		const rotation = mesh.rotationQuaternion.toEulerAngles()
+		rotation.y += 0.01;
+		mesh.rotationQuaternion = BABYLON.Quaternion.FromEulerVector(rotation)            
 	});
 
         return scene{{ include.id }};
