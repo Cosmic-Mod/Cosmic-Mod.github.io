@@ -28,6 +28,7 @@
 			mesh.rotation.y += 20;
 			const rotation = mesh.rotationQuaternion.toEulerAngles()
 		        rotation.y += 0.01;
+			rotation.x = 0.01
 		        mesh.rotationQuaternion = BABYLON.Quaternion.FromEulerVector(rotation)
 		
 
