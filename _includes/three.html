@@ -25,7 +25,7 @@
             scene{{ include.id }},function (M) {
 		mesh = M[0];
 		scene{{ include.id }}.beforeRender = () => {
-			console.log(mesh.rotation.y);
+			mesh.rotation.y += 0.1;
 
 		};
 	    }
