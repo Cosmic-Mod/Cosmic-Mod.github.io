@@ -11,6 +11,8 @@ layout: page
 </div>
 <div class="column">
   <div class="card" markdown="1">
+  <div class="card-content">
+  <div class="content">
     
   ```Location```: -65000, 1475, 30000  
     
@@ -27,6 +29,8 @@ layout: page
    ```Ring scale radius```: 3500  
    
    ```Dimension```: cosmos:saturn_lands 
+   </div>
+   </div>
    </div>
     
 </div>
