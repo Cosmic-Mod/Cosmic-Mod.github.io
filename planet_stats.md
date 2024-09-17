@@ -112,6 +112,41 @@ toc_title: Planets
 
 
 
+### Moon
+<div class="columns" markdown="1">
+  <div class="column"> 
+    {% include three.html id="moon_stats" path="/assets/models/" model="moon.gltf" %}
+</div>
+<div class="column">
+  <div class="card">
+  <div class="card-content">
+  <div class="content" markdown="1">
+    
+  ```Location```: -65000, 1475, 30000  
+    
+  ```Scale```: 1450  
+    
+   ```Gui scale```: 10.3  
+    
+  ```Gui "ponder" scale```: 47  
+    
+  ```Rings```: true  
+    
+  ```Ring radius```: 1500  
+    
+   ```Ring scale radius```: 3500  
+   
+   ```Dimension```: cosmos:saturn_lands 
+   </div>
+   </div>
+   </div>
+    
+</div>
+
+</div>
+
+
+
 ### Mars
 <div class="columns" markdown="1">
   <div class="column"> 
@@ -181,11 +216,147 @@ toc_title: Planets
 </div>
 
 
+### Europa
+<div class="columns" markdown="1">
+  <div class="column"> 
+    {% include three.html id="europa_stats" path="/assets/models/" model="europa.gltf" %}
+</div>
+<div class="column">
+  <div class="card">
+  <div class="card-content">
+  <div class="content" markdown="1">
+    
+  ```Location```: -65000, 1475, 30000  
+    
+  ```Scale```: 1450  
+    
+   ```Gui scale```: 10.3  
+    
+  ```Gui "ponder" scale```: 47  
+    
+  ```Rings```: true  
+    
+  ```Ring radius```: 1500  
+    
+   ```Ring scale radius```: 3500  
+   
+   ```Dimension```: cosmos:saturn_lands 
+   </div>
+   </div>
+   </div>
+    
+</div>
+
+</div>
+
+
 
 ### Saturn 
 <div class="columns" markdown="1">
   <div class="column"> 
     {% include three.html id="saturn_stats" path="/assets/models/" model="saturn.gltf" %}
+</div>
+<div class="column">
+  <div class="card">
+  <div class="card-content">
+  <div class="content" markdown="1">
+    
+  ```Location```: -65000, 1475, 30000  
+    
+  ```Scale```: 1450  
+    
+   ```Gui scale```: 10.3  
+    
+  ```Gui "ponder" scale```: 47  
+    
+  ```Rings```: true  
+    
+  ```Ring radius```: 1500  
+    
+   ```Ring scale radius```: 3500  
+   
+   ```Dimension```: cosmos:saturn_lands 
+   </div>
+   </div>
+   </div>
+    
+</div>
+
+</div>
+
+
+### Uranus
+<div class="columns" markdown="1">
+  <div class="column"> 
+    {% include three.html id="uranus_stats" path="/assets/models/" model="uranus.gltf" %}
+</div>
+<div class="column">
+  <div class="card">
+  <div class="card-content">
+  <div class="content" markdown="1">
+    
+  ```Location```: -65000, 1475, 30000  
+    
+  ```Scale```: 1450  
+    
+   ```Gui scale```: 10.3  
+    
+  ```Gui "ponder" scale```: 47  
+    
+  ```Rings```: true  
+    
+  ```Ring radius```: 1500  
+    
+   ```Ring scale radius```: 3500  
+   
+   ```Dimension```: cosmos:saturn_lands 
+   </div>
+   </div>
+   </div>
+    
+</div>
+
+</div>
+
+
+### Neptune 
+<div class="columns" markdown="1">
+  <div class="column"> 
+    {% include three.html id="neptune_stats" path="/assets/models/" model="neptune.gltf" %}
+</div>
+<div class="column">
+  <div class="card">
+  <div class="card-content">
+  <div class="content" markdown="1">
+    
+  ```Location```: -65000, 1475, 30000  
+    
+  ```Scale```: 1450  
+    
+   ```Gui scale```: 10.3  
+    
+  ```Gui "ponder" scale```: 47  
+    
+  ```Rings```: true  
+    
+  ```Ring radius```: 1500  
+    
+   ```Ring scale radius```: 3500  
+   
+   ```Dimension```: cosmos:saturn_lands 
+   </div>
+   </div>
+   </div>
+    
+</div>
+
+</div>
+
+
+### Pluto
+<div class="columns" markdown="1">
+  <div class="column"> 
+    {% include three.html id="pluto_stats" path="/assets/models/" model="pluto.gltf" %}
 </div>
 <div class="column">
   <div class="card">
