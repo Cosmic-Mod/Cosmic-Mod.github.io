@@ -5,7 +5,7 @@ layout: page
 hero_tag: true
 hero_tag_class: is-large is-danger 
 hero_tag_text: "Warning: This mod is in alpha"
-hero_extras:  "<div class="control"><a href="https://www.curseforge.com/minecraft/mc-mods/cosmic-horizons" class="button is-medium is-danger" style="background: #f16436;"><img height="32" width="32" src="https://cdn.simpleicons.org/curseforge/white" style="margin-right: 10px;"/>Curseforge</a><a href="https://modrinth.com/mod/cosmic-horizons(cosmos)" class="button is-success is-medium"><img height="32" width="32" src="https://cdn.simpleicons.org/modrinth/white" style="margin-right: 10px;"/>Modrinth</a><a href="https://discord.gg/d6EtbjVs9j" class="button is-link is-medium"><img height="32" width="32" src="https://cdn.simpleicons.org/discord/white" style="margin-right: 10px;"/>Discord</a></div>"
+hero_extras:  main_hero_buttons
 ---
 
 # A brand new Minecraft space mod!
