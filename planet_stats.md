@@ -12,7 +12,7 @@ toc_title: Planets
     {% include three.html id="saturn_stats" path="/assets/models/" model="saturn.gltf" %}
 </div>
 <div class="column">
-  <div class="card" style="width: 65%">
+  <div class="card">
   <div class="card-content">
   <div class="content" markdown="1">
     
