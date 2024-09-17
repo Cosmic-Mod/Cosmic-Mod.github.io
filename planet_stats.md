@@ -5,8 +5,8 @@ layout: page
 toc: true
 toc_title: Planets
 ---
-# The Solar System
-## Saturn 
+## The Solar System
+### Saturn 
 <div class="columns" markdown="1">
   <div class="column"> 
     {% include three.html id="saturn_stats" path="/assets/models/" model="saturn.gltf" %}
