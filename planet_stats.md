@@ -4,7 +4,7 @@ subtitle: Info on each planet
 layout: page
 ---
 
-### Saturn 
+## Saturn 
 <div class="columns" markdown="1">
   <div class="column"> 
     {% include three.html id="saturn_stats" path="/assets/models/" model="saturn.gltf" %}
