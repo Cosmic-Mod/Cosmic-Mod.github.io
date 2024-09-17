@@ -23,3 +23,18 @@ Skybox data is a JSON object, commonly used in [solar system data](/addonsupport
 
 `"fade"`: string, can be "day" or "night". Defines when the skybox will fade away. (Optional)
 
+`"vanilla_sunlight"`: boolean, controls weather the sunlight color will be vanilla or not. 
+
+`"sunlight_color"`: JSON object, must be included if `"vanilla_sunlight"` is false. Must include the following:
+
+{% capture light_data %}
+
+"r": int, from 0 to 255. Controls the red in the sunlight color
+
+"g": int, from 0 to 255. Controls the green in the sunlight color
+
+"b": int, from 0 to 255. Controls the blue in the sunlight color
+
+"alpha": int, from 0 to 255. Controls the transparency of the sunlight. Basically the brightness of the sunlight. 255 is full brightness, 0 is darkness.
+
+{% endcapture %} {% include spoiler.html name="Sunlight color" content=light_data %}
