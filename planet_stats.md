@@ -10,9 +10,9 @@ layout: page
     {% include three.html id="saturn_stats" path="/assets/models/" model="saturn.gltf" %}
 </div>
 <div class="column">
-  <div class="card" markdown="1">
+  <div class="card">
   <div class="card-content">
-  <div class="content">
+  <div class="content" markdown="1">
     
   ```Location```: -65000, 1475, 30000  
     
