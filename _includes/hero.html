@@ -29,7 +29,7 @@
             </div>
           {% endif %}
           {% if page.hero_extras %}
-          {{ page.hero_extras }}
+          {% include {{ page.hero_extras}} %}
           {% endif %}
         </div>
     </div>
