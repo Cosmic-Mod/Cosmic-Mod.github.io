@@ -40,3 +40,46 @@ Example:
 
 {% endcapture %} {% include spoiler.html name="Fog data" content=fog_data %}
 
+`"weather_data"`: JSON object, optional. `"weather"` must be false for this setting to work. This setting will override vanilla rain/snow for custom particles, sounds etc. Must contain the following:
+
+{% capture weather_data %}
+
+`"condition"`: string, must be "rain", "snow" or "none". Controls when the custom weather will render.
+
+`"texture_id"`: the name of the texture in assets/cosmos/... to be used for the particles
+
+`"speed"`: float, the speed of the weather. Vanilla snow is 0.5, and vanilla rain is 2.
+
+`"sound_generic"`: string, the sound played when the player is in an open area with this weather. Should be the name of a sound as shown with the /playsound command. (e.g. block.snow.fall)
+
+`"sound_special"`: string, same as above, but will be player when the player is in an inclosed space instead. E.g. a house or a cave.
+
+`"power"`: int, basically the volume of this weather. Recommended to be 1-5
+
+`"hurt"`: boolean, controls whether the weather will hurt players. (E.g. acid rain)
+
+`"damage"`: int, only needed if `"hurt"` is true. Controls the damage the weather does to the player. Each 1 is half a heart, so 5 would be 2 hearts and a half.
+
+{% endcapture %} {% include spoiler.html name="Weather data" content=weather_data %}
+
+`"atmospheric_data"`: JSON object, optional. If not included, will default to overworld. If included, must contain the following:
+
+{% capture atmo_data %}
+
+`"atmosphere_y"`: int, the Y level where players will be transported to space.
+
+`"travel_to"`: string, the dimension players will be transported to on reaching the `"atmosphere_y"`. Usually the solar system dimension this planet is in. Should be in `namespace:dimension` form.
+
+`"origin_x"`: int, the x position players will be sent to on entering this planet by default
+
+`"origin_y"`: int, same as above but y position
+
+`"origin_z"`: int, same as above but z position
+
+`"overlay_texture_id"`: string, the name of a texture in assets/cosmos/... Will be used for the sidebar showing height progress when launching a rocket. MUST be 16x128 
+
+`"shipbit_y"`: int, the offset of pixels from the bottom of the overlay image that will be the lowest point the ship icon can reach. 
+
+`"ship_min_y"`: int, the y position at which the rocket icon will be at the lowest point, at `"shipbit_y"` on the overlay texture
+
+{% endcapture %} {% include spoiler.html name="Atmospheric data" content=atmo_data %}
