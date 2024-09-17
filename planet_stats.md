@@ -2,7 +2,7 @@
 title: Planet infos
 subtitle: Info on each planet
 layout: page
-menubar_toc: true
+toc: true
 toc_title: Planets
 ---
 
