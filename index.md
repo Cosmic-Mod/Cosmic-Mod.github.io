@@ -5,7 +5,7 @@ layout: page
 hero_tag: true
 hero_tag_class: is-large is-danger 
 hero_tag_text: "Warning: This mod is in alpha"
-hero_extras:  main_hero_buttons
+hero_extras:  main_hero_buttons.html
 ---
 
 # A brand new Minecraft space mod!
