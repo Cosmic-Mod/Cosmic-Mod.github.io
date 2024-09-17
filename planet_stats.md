@@ -16,7 +16,7 @@ layout: page
     
    ```Gui scale```: 10.3  
     
-  ```Gui **ponder** scale```: 47  
+  ```Gui ponder scale```: 47  
     
   ```Rings```: true  
     
