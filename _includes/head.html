@@ -1,7 +1,8 @@
 <head>
-    <script id="console" src="https://cdn.jsdelivr.net/gh/c-kick/mobileConsole/hnl.mobileconsole.min.js"></script>
+    <script id="console"></script>
     <script>
-        if (new URLSearchParams(window.location.search).has("console")) {
+        url = new URLSearchParams(window.location.search);
+        if (url.has("console")) {
             document.getElementById("console").src = "https://cdn.jsdelivr.net/gh/c-kick/mobileConsole/hnl.mobileconsole.min.js";
         }
     </script>
