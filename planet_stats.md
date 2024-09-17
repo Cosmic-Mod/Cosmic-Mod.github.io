@@ -10,7 +10,7 @@ layout: page
     {% include three.html id="saturn_stats" path="/assets/models/" model="saturn.gltf" %}
 </div>
 <div class="column">
-  <div class="card" style="width: 30%">
+  <div class="card" style="width: 50%">
   <div class="card-content">
   <div class="content" markdown="1">
     
