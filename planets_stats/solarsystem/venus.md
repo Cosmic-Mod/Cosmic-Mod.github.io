@@ -4,7 +4,6 @@ subtitle:
 layout: page
 ---
 
-### Venus
 <div class="columns" markdown="1">
   <div class="column"> 
     {% include three.html id="venusstats" path="/assets/models/" model="venus.gltf" %}
