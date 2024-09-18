@@ -2,6 +2,8 @@
   items:
     - name: Getting started
       link: /addonsupport/gettingstarted/
+    - name: Cosmic data files
+      link: /addonsupport/cosmicdata/
     - name: Solar Systems
       link: /addonsupport/solarsystems/
     - name: Planets
@@ -10,6 +12,8 @@
       link: /addonsupport/dimensions/
     - name: Skyboxes
       link: /addonsupport/skyboxes/
+    - name: Sky data
+      link: /addonsupport/skydata/
     - name: Fancy JSON text
       link: /addonsupport/fancytext/
     - name: Contributing
