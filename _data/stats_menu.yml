@@ -1,0 +1,26 @@
+- label: Planets
+  items:
+    - name: Solar System
+      link: /solarsystem/
+      - name: Mercury
+        link: /addonsupport/solarsystems/
+      - name: Venus 
+        link: /addonsupport/planets/
+      - name: Earth
+        link: /addonsupport/dimensions/
+      - name: Moon
+        link: /addonsupport/skyboxes/
+      - name: Mars 
+        link: /addonsupport/fancytext/
+      - name: Jupiter
+        link: /addonsupport/contributing/
+      - name: Europa
+        link: /addonsupport/solarsystems/
+      - name: Saturn
+        link: /addonsupport/planets/
+      - name: Uranus
+        link: /addonsupport/dimensions/
+      - name: Neptune 
+        link: /addonsupport/skyboxes/
+      - name: Pluto
+        link: /addonsupport/fancytext/
