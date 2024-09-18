@@ -81,16 +81,15 @@
 
 
       const scene{{ include.id }} = createScene{{ include.id }}(); //Call the createScene function
-      var skip{{ include.id }} = false
+      
 
 
       // Register a render loop to repeatedly render the scene
 
       engine{{ include.id }}.runRenderLoop(function () {
-	        if (!skip{{ include.id }}) {
-                    scene{{ include.id }}.render();
-                }
-                skip{{ include.id }} = !skip{{ include.id }}
+	        
+                scene{{ include.id }}.render();
+                
 
       });
 
