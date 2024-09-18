@@ -4,7 +4,7 @@ subtitle:
 layout: page
 ---
 
-### Earth
+
 <div class="columns" markdown="1">
   <div class="column"> 
     {% include three.html id="earthstats" path="/assets/models/" model="earth.gltf" %}
