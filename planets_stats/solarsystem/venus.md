@@ -1,6 +1,6 @@
 ---
-title: Cosmic Horizons Wiki
-subtitle: The wiki for the Cosmic Horizons mod
+title: Venus
+subtitle: 
 layout: page
 ---
 
