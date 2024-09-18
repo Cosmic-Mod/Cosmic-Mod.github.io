@@ -10,7 +10,7 @@ toc_title: Planets
 ### Mercury
 <div class="columns" markdown="1">
   <div class="column"> 
-    {% include three.html id="stats" path="/assets/models/" model="mercury.gltf" %}
+    {% include three.html id="mercurystats" path="/assets/models/" model="mercury.gltf" %}
 </div>
 <div class="column">
   <div class="card">
@@ -45,7 +45,7 @@ toc_title: Planets
 ### Venus
 <div class="columns" markdown="1">
   <div class="column"> 
-    {% include three.html id="stats" path="/assets/models/" model="venus.gltf" %}
+    {% include three.html id="venusstats" path="/assets/models/" model="venus.gltf" %}
 </div>
 <div class="column">
   <div class="card">
@@ -80,7 +80,7 @@ toc_title: Planets
 ### Earth
 <div class="columns" markdown="1">
   <div class="column"> 
-    {% include three.html id="stats" path="/assets/models/" model="earth.gltf" %}
+    {% include three.html id="earthstats" path="/assets/models/" model="earth.gltf" %}
 </div>
 <div class="column">
   <div class="card">
@@ -115,7 +115,7 @@ toc_title: Planets
 ### Moon
 <div class="columns" markdown="1">
   <div class="column"> 
-    {% include three.html id="stats" path="/assets/models/" model="moon.gltf" %}
+    {% include three.html id="moonstats" path="/assets/models/" model="moon.gltf" %}
 </div>
 <div class="column">
   <div class="card">
@@ -150,7 +150,7 @@ toc_title: Planets
 ### Mars
 <div class="columns" markdown="1">
   <div class="column"> 
-    {% include three.html id="stats" path="/assets/models/" model="mars.gltf" %}
+    {% include three.html id="marsstats" path="/assets/models/" model="mars.gltf" %}
 </div>
 <div class="column">
   <div class="card">
@@ -185,7 +185,7 @@ toc_title: Planets
 ### Jupiter
 <div class="columns" markdown="1">
   <div class="column"> 
-    {% include three.html id="stats" path="/assets/models/" model="jupiter.gltf" %}
+    {% include three.html id="jupiterstats" path="/assets/models/" model="jupiter.gltf" %}
 </div>
 <div class="column">
   <div class="card">
@@ -219,7 +219,7 @@ toc_title: Planets
 ### Europa
 <div class="columns" markdown="1">
   <div class="column"> 
-    {% include three.html id="stats" path="/assets/models/" model="europa.gltf" %}
+    {% include three.html id="europastats" path="/assets/models/" model="europa.gltf" %}
 </div>
 <div class="column">
   <div class="card">
@@ -254,7 +254,7 @@ toc_title: Planets
 ### Saturn 
 <div class="columns" markdown="1">
   <div class="column"> 
-    {% include three.html id="stats" path="/assets/models/" model="saturn.gltf" %}
+    {% include three.html id="saturnstats" path="/assets/models/" model="saturn.gltf" %}
 </div>
 <div class="column">
   <div class="card">
@@ -288,7 +288,7 @@ toc_title: Planets
 ### Uranus
 <div class="columns" markdown="1">
   <div class="column"> 
-    {% include three.html id="stats" path="/assets/models/" model="uranus.gltf" %}
+    {% include three.html id="uranusstats" path="/assets/models/" model="uranus.gltf" %}
 </div>
 <div class="column">
   <div class="card">
@@ -322,7 +322,7 @@ toc_title: Planets
 ### Neptune 
 <div class="columns" markdown="1">
   <div class="column"> 
-    {% include three.html id="stats" path="/assets/models/" model="neptune.gltf" %}
+    {% include three.html id="neptunestats" path="/assets/models/" model="neptune.gltf" %}
 </div>
 <div class="column">
   <div class="card">
@@ -356,7 +356,7 @@ toc_title: Planets
 ### Pluto
 <div class="columns" markdown="1">
   <div class="column"> 
-    {% include three.html id="stats" path="/assets/models/" model="pluto.gltf" %}
+    {% include three.html id="plutostats" path="/assets/models/" model="pluto.gltf" %}
 </div>
 <div class="column">
   <div class="card">
@@ -392,7 +392,7 @@ toc_title: Planets
 ### Dark Earth
 <div class="columns" markdown="1">
   <div class="column"> 
-    {% include three.html id="stats" path="/assets/models/" model="darkearth.gltf" %}
+    {% include three.html id="darkearthstats" path="/assets/models/" model="darkearth.gltf" %}
 </div>
 <div class="column">
   <div class="card">
@@ -429,7 +429,7 @@ toc_title: Planets
 ### Glacio
 <div class="columns" markdown="1">
   <div class="column"> 
-    {% include three.html id="stats" path="/assets/models/" model="glacio.gltf" %}
+    {% include three.html id="glaciostats" path="/assets/models/" model="glacio.gltf" %}
 </div>
 <div class="column">
   <div class="card">
@@ -466,7 +466,7 @@ toc_title: Planets
 ### J1407b
 <div class="columns" markdown="1">
   <div class="column"> 
-    {% include three.html id="stats" path="/assets/models/" model="jbp.gltf" %}
+    {% include three.html id="jbpstats" path="/assets/models/" model="jbp.gltf" %}
 </div>
 <div class="column">
   <div class="card">
@@ -501,7 +501,7 @@ toc_title: Planets
 ### Sin
 <div class="columns" markdown="1">
   <div class="column"> 
-    {% include three.html id="stats" path="/assets/models/" model="sin.gltf" %}
+    {% include three.html id="sinstats" path="/assets/models/" model="sin.gltf" %}
 </div>
 <div class="column">
   <div class="card">
