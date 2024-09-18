@@ -98,4 +98,4 @@ flip_z
 
 `attached_dimension_id`: string, the dimension the planet will teleport you to
 
-`skybox_data`: dictionary, contains the skybox?
+`skybox_data`: JSON object, see [skybox data](/addonsupport/skyboxes/)
