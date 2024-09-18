@@ -7,9 +7,41 @@ menubar: docs_menu
 
 Most parts of the datapack system all stem from the same files. JSON files in the cosmic data section of a datapack.
 
+They are stored under the cosmic namespace, in the cosmic_data folder. 
+
+> data
+> > your_namespace
+> > > etc
+
+> > cosmos
+> > > cosmic_data
+> > > > solar_system_1.json
+> > > > 
+> > > > solar_system_2.json
+> > > > 
+> > > > planet_1.json
+> > > >
+> > > > planet_2.json
+> > > >
+> > > > overworld.json
+> > > >
+> > > > other_dimension.json
+
 While all of these files are simply a "cosmic dimension data" file, they are commonly in two forms.
 
 Either used to [setup a space dimension](/addonsupport/solarsystems/), or used to [configure settings for a planet/dimension](/addonsupport/dimensions/).
+
+They will always include an `"attached_dimention_id"`, specifying which dimension they control.
+
+
+|                                               | Solar systems | Planets | Dimensions |
+|-----------------------------------------------|---------------|---------|------------|
+| [attached_dimension_id]()                     | &#9745;       | &#9745; | &#9745;    |
+| [planet_data](/addonsupport/planets/)         | &#9745;       | &#9744; | &#9744;    |
+| [gui_data](/addonsupport/solarsystems/)       | &#9745;       | &#9744; | &#9744;    |
+| [skybox_data](/addonsupport/skyboxes/)        | &#9744;       | &#9745; | &#9745;    |
+| [dimensional_data](/addonsupport/dimensions/) | &#9745;       | &#9745; | &#9745;    |
+
 
 {% capture example_solar %}
 ```json
