@@ -96,6 +96,6 @@ flip_z
 {% endcapture %}
 {% include spoiler.html name="Ringed data" content=ringed_data %}
 
-`attached_dimention_id`: string, todo: figure out
+`attached_dimension_id`: string, the dimension the planet will teleport you to
 
 `skybox_data`: dictionary, contains the skybox?
