@@ -47,6 +47,8 @@ So you should add your planets from furthest to nearest in order in this diction
 
 `"ring_data"`: JSON object, same as said in [planet_data: ring_data](/addonsupport/planets/). Optional.
 
+`"fade"`: string, optional. Can be "day" or "night". If specified, the sky object will only be visible at the specified time.
+
 {% endcapture %} {% include spoiler.html name="'Object' type attributes" content=object_data %}
 
 {% capture ring_data %}
