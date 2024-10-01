@@ -7,8 +7,8 @@ menubar: docs_menu
 
 Solar system files are stored under the cosmic namespace, in the cosmic_data folder. 
 
-<ul style="list-style-image: url('sqpurple.gif');">
-     <li class="fa-solid fa-folder">data
+<ul style="list-style-image: url('https://raw.githubusercontent.com/Cosmic-Mod/Cosmic-Mod.github.io/refs/heads/main/assets/other/fa/shuttle-space.svg');">
+     <li>data
            <ul>
                <li>SubFile 1</li>
                <li>SubFile 2</li>
