@@ -10,9 +10,9 @@ Solar system files are stored under the cosmic namespace, in the cosmic_data fol
 <ul>
      <li class="fa-solid fa-folder">data
            <ul>
-               <li class="fa-solid fa-folder">SubFile 1</li>
-               <li class="fa-solid fa-folder">SubFile 2</li>
-               <li class="fa-solid fa-folder">SubFile 3</li>
+               <li><i class="fa-solid fa-file"></i>SubFile 1</li>
+               <li><i class="fa-solid fa-file"></i>SubFile 2</li>
+               <li><i class="fa-solid fa-file"></i>SubFile 3</li>
            </ul>
      </li>
 </ul>
