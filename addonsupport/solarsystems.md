@@ -7,12 +7,12 @@ menubar: docs_menu
 
 Solar system files are stored under the cosmic namespace, in the cosmic_data folder. 
 
-<ul>
+<ul style="list-style-image: url('sqpurple.gif');">
      <li class="fa-solid fa-folder">data
            <ul>
-               <li><i class="fa-solid fa-file"></i>SubFile 1</li>
-               <li><i class="fa-solid fa-file"></i>SubFile 2</li>
-               <li><i class="fa-solid fa-file"></i>SubFile 3</li>
+               <li>SubFile 1</li>
+               <li>SubFile 2</li>
+               <li>SubFile 3</li>
            </ul>
      </li>
 </ul>
