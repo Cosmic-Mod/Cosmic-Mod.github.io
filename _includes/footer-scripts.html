@@ -2,8 +2,11 @@
 
 <script>
 // Code for the planet editor page. NEEDS CLEANING UP, SORRY
+
+// If the page doesn't have a planetCanvas, its not the right page to be doing this JS on
+// (Hacky, I know, but it works...)
 if (document.getElementById("planetCanvas")) {
-    // Get elements from the DOM
+    // Get elements for later
     const canvas = document.getElementById('planetCanvas');
     const ctx = canvas.getContext('2d');
     const addPlanetBtn = document.getElementById('addPlanetBtn');
@@ -13,6 +16,7 @@ if (document.getElementById("planetCanvas")) {
     const deletePlanetBtn = document.getElementById('deletePlanetBtn');
     const planetProperties = document.querySelector('.planet-properties');
 
+    // The input boxes are in a hidden div by default I think, but the are always there
     const xinput = document.getElementById("xinput")
     const yinput = document.getElementById("yinput")
     const zinput = document.getElementById("zinput")
@@ -43,7 +47,7 @@ if (document.getElementById("planetCanvas")) {
     planetProperties.addEventListener("input", updatePlanet)
 
 
-    // Add a planet with Minecraft coordinates
+    // Add a planet with Minecraft coordinates 0, 0, 0
     function addPlanet() {
         const newPlanet = {
             x: 0, 
@@ -86,11 +90,12 @@ if (document.getElementById("planetCanvas")) {
 
         console.log(planets, selectedPlanet)
 
-
+        // They clicked on a planet, so they are now dragging it
         if (selectedPlanet) {
             openPropertiesMenu(selectedPlanet);
             updateProperties()
             isDraggingPlanet = true;
+        // Else, they are trying to drag the canvas
         } else {
             planetProperties.style.display = 'none';
             // Start panning the canvas
@@ -108,6 +113,8 @@ if (document.getElementById("planetCanvas")) {
             // Update planet Minecraft coordinates based on dragging
             selectedPlanet.x = mousePos.x - canvas.width / 2 + cameraOffsetX;
             selectedPlanet.z = mousePos.y - canvas.height / 2 + cameraOffsetY;
+
+            // To update the input boxes on the planets new position
             updateProperties()
             drawPlanets();
         } else if (isPanning) {
@@ -126,7 +133,7 @@ if (document.getElementById("planetCanvas")) {
         isPanning = false;
     }
 
-    // Check if the mouse click is inside the square (planet)
+    // Check if the mouse click is inside one of the square planets
     function isInsidePlanet(mousePos, planet) {
         const screenX = canvas.width / 2 + planet.x - cameraOffsetX;
         const screenY = canvas.height / 2 + planet.z - cameraOffsetY;
@@ -173,6 +180,7 @@ if (document.getElementById("planetCanvas")) {
         }
     }
 
+    // Update menu inputs based on planet properties (for when planet is dragged or a new planet is selected)
     function updateProperties() {
         if (selectedPlanet) {
             xinput.value = selectedPlanet.x
