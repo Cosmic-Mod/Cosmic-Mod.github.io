@@ -33,6 +33,11 @@ Either used to [setup a space dimension](/addonsupport/solarsystems/), or used t
 
 They will always include an `"attached_dimention_id"`, specifying which dimension they control.
 
+In the file system example, `solar_system_1` and `solar_system_2` are set up as solar system files. They contain a list of planets and what dimensions they go to, GUI data, etc.
+
+`planet_1`, `planet_2`, `overworld`, and `other_dimension` however are all set up as planet/dimension files. This type of file can define a dimensions gravity, custom sky, or space dimension
+(dimension that you reach at a certain height). None of these are required, so you may have one dimension file thats just for a custom sky (like `overworld` might be), but another that has custom gravity, space dimension, fog color, etc (like `planet_1` might be).
+
 
 |                                               | Solar systems | Planets | Dimensions |
 |-----------------------------------------------|---------------|---------|------------|
